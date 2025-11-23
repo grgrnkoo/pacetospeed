@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function WhyPaceToSpeedConverterPage() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4 pt-20 md:pt-24">
       {/* Article Content */}
       <article className="max-w-3xl mx-auto py-12 px-4">
         <header className="mb-8">

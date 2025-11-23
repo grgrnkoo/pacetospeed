@@ -233,18 +233,18 @@ function ConverterContent() {
   );
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
+    <div className="h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-3 md:p-4 pt-20 md:pt-24">
       <div className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+        <div className="text-center mb-4 md:mb-6">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1 md:mb-2">
             Pace to Speed Converter
           </h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
             Runner's conversion tool
           </p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-4 md:p-6 space-y-4 md:space-y-6">
           {/* Unit Toggle */}
           <div className="flex justify-center">
             <button
@@ -279,11 +279,11 @@ function ConverterContent() {
           <div className="flex justify-center">
             <button
               onClick={handleSwap}
-              className="hover:cursor-pointer group p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all hover:shadow-xl hover:scale-110 active:scale-95"
+              className="hover:cursor-pointer group p-2 md:p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all hover:shadow-xl hover:scale-110 active:scale-95"
               aria-label="Swap pace and speed"
             >
               <svg
-                className={`w-6 h-6 transition-transform duration-500 ${
+                className={`w-5 h-5 md:w-6 md:h-6 transition-transform duration-500 ${
                   mode === 'speed' ? 'rotate-180' : ''
                 }`}
                 fill="none"
@@ -303,10 +303,10 @@ function ConverterContent() {
         </div>
 
         {/* Info section - always visible */}
-        <div className="mt-6 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
-          <div className="grid grid-cols-2 gap-4 text-center">
+        <div className="mt-3 md:mt-4 p-3 md:p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+          <div className="grid grid-cols-2 gap-3 md:gap-4 text-center">
             <div>
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+              <div className="text-xl md:text-2xl font-bold text-blue-600 dark:text-blue-400">
                 {paceMinutes || '0'}:{(paceSeconds || '0').padStart(2, '0')}
               </div>
               <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -314,7 +314,7 @@ function ConverterContent() {
               </div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+              <div className="text-xl md:text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                 {speed || '0'}
               </div>
               <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -325,8 +325,8 @@ function ConverterContent() {
         </div>
 
         {/* Footer */}
-        <footer className="mt-8 text-center">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+        <footer className="mt-3 md:mt-6 text-center">
+          <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
             built by{' '}
             <a
               href="https://x.com/grgrnko"
