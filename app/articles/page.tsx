@@ -36,7 +36,7 @@ export default function ArticlesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4 pt-20 md:pt-24">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4pt-16 md:pt-0">
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-12 px-4">
         <div className="mb-12">

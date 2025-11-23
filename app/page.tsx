@@ -233,7 +233,7 @@ function ConverterContent() {
   );
 
   return (
-    <div className="h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-3 md:p-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-3 md:p-4 pt-16 md:pt-0">
       <div className="w-full max-w-md">
         <div className="text-center mb-4 md:mb-6">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1 md:mb-2">
