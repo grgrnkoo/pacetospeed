@@ -233,8 +233,8 @@ function ConverterContent() {
   );
 
   return (
-    <div className="h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-3 md:p-4 pt-20 md:pt-24">
-      <div className="w-full max-w-md">
+    <div className="h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-3 md:p-4">
+      <div className="w-full max-w-md pt-20 md:pt-24">
         <div className="text-center mb-4 md:mb-6">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1 md:mb-2">
             Pace to Speed Converter
