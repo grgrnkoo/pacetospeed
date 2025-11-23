@@ -16,7 +16,7 @@ export default function Header() {
           aria-label="Home"
         >
           <img
-            src="/favicon.png"
+            src="/icon.png"
             alt="Pace to Speed Converter"
             className="w-10 h-10 md:w-12 md:h-12 rounded-full"
           />

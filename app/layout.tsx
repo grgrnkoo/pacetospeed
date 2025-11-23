@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: 'Pace to Speed Converter',
     images: [
       {
-        url: '/favicon.png',
+        url: '/icon.png',
         width: 1024,
         height: 1024,
         alt: 'Pace to Speed Converter',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: 'Pace to Speed Converter | Free Running Calculator',
     description: 'Free pace to speed converter for runners. Instantly convert between pace and speed units.',
     creator: '@grgrnko',
-    images: ['/favicon.png'],
+    images: ['/icon.png'],
   },
   robots: {
     index: true,
