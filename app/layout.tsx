@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
+import Header from "./components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Oleg', url: 'https://x.com/grgrnko' }],
   creator: 'Oleg',
   publisher: 'Pace to Speed',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -37,12 +43,21 @@ export const metadata: Metadata = {
     title: 'Pace to Speed Converter | Free Running Calculator',
     description: 'Free pace to speed converter for runners. Instantly convert between min/km, min/mile, km/h, and mph.',
     siteName: 'Pace to Speed Converter',
+    images: [
+      {
+        url: '/favicon.png',
+        width: 1024,
+        height: 1024,
+        alt: 'Pace to Speed Converter',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pace to Speed Converter | Free Running Calculator',
     description: 'Free pace to speed converter for runners. Instantly convert between pace and speed units.',
     creator: '@grgrnko',
+    images: ['/favicon.png'],
   },
   robots: {
     index: true,
@@ -88,6 +103,7 @@ export default function RootLayout({
             gtag('config', 'G-F4M6TDBQQH');
           `}
         </Script>
+        <Header />
         {children}
       </body>
     </html>

@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
 type Unit = 'km' | 'mile';
 type Mode = 'pace' | 'speed';
 
-export default function Home() {
+function ConverterContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   
@@ -233,27 +233,16 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex flex-col p-4">
-      {/* Header */}
-      <header className="w-full py-4 px-4 flex justify-end">
-        <a
-          href="/articles"
-          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium hover:cursor-pointer"
-        >
-          Articles
-        </a>
-      </header>
-
-      <div className="flex-1 flex items-center justify-center">
-        <div className="w-full max-w-md">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-              Pace to Speed Converter
-            </h1>
-            <p className="text-gray-600 dark:text-gray-400">
-              Runner's conversion tool
-            </p>
-          </div>
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+            Pace to Speed Converter
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400">
+            Runner's conversion tool
+          </p>
+        </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-6">
           {/* Unit Toggle */}
@@ -349,8 +338,26 @@ export default function Home() {
             </a>
           </p>
         </footer>
-        </div>
       </div>
     </div>
+  );
+}
+
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-gray-600 dark:text-gray-400">Loading converter...</p>
+      </div>
+    </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <ConverterContent />
+    </Suspense>
   );
 }

@@ -37,16 +37,6 @@ export default function ArticlesPage() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-4">
-      {/* Header */}
-      <header className="max-w-4xl mx-auto py-4 px-4 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium hover:cursor-pointer"
-        >
-          ← Back to Converter
-        </Link>
-      </header>
-
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-12 px-4">
         <div className="mb-12">
