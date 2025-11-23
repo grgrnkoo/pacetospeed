@@ -1,4 +1,26 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Why a Pace-to-Speed Converter Is a Must-Have Tool for Runners',
+  description: 'Discover why pace-to-speed converters are essential for runners. Perfect for treadmill training, race planning, comparing training zones, and understanding running data from apps like Strava and Garmin.',
+  keywords: ['pace to speed', 'pace converter', 'speed converter', 'treadmill training', 'running pace calculator', 'training zones', 'race planning', 'running apps', 'min/km', 'km/h', 'running tools'],
+  authors: [{ name: 'Oleg', url: 'https://x.com/grgrnko' }],
+  openGraph: {
+    title: 'Why a Pace-to-Speed Converter Is a Must-Have Tool for Runners',
+    description: 'Discover why pace-to-speed converters are essential for runners. Perfect for treadmill training, race planning, and understanding running data.',
+    type: 'article',
+    publishedTime: '2024-01-20T00:00:00.000Z',
+    authors: ['Oleg'],
+    tags: ['running', 'pace', 'speed', 'training', 'treadmill', 'race planning'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Why a Pace-to-Speed Converter Is a Must-Have Tool for Runners',
+    description: 'Discover why pace-to-speed converters are essential for runners. Perfect for treadmill training and race planning.',
+    creator: '@grgrnko',
+  },
+};
 
 export default function WhyPaceToSpeedConverterPage() {
   return (

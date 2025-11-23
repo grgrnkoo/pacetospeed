@@ -1,4 +1,21 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Running Tips & Training Articles',
+  description: 'Expert tips, guides, and insights for runners. Learn about pace, speed, training zones, treadmill workouts, and race planning strategies.',
+  keywords: ['pace to speed', 'running tips', 'training articles', 'pace guide', 'running training', 'marathon training', 'treadmill workouts', 'race strategy'],
+  openGraph: {
+    title: 'Running Tips & Training Articles | Pace to Speed Converter',
+    description: 'Expert tips, guides, and insights for runners. Learn about pace, speed, training zones, and race planning.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Running Tips & Training Articles',
+    description: 'Expert tips, guides, and insights for runners. Learn about pace, speed, training zones, and race planning.',
+  },
+};
 
 export default function ArticlesPage() {
   // List of articles

@@ -1,4 +1,26 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Understanding Running Pace: A Complete Guide for Runners',
+  description: 'Learn everything about running pace - what it is, how it differs from speed, why it matters for training, and common training paces including easy, tempo, and race pace.',
+  keywords: ['pace to speed', 'running pace', 'pace vs speed', 'training pace', 'easy pace', 'tempo pace', 'race pace', 'running training zones', 'pace calculation', 'marathon pace'],
+  authors: [{ name: 'Oleg', url: 'https://x.com/grgrnko' }],
+  openGraph: {
+    title: 'Understanding Running Pace: A Complete Guide for Runners',
+    description: 'Learn everything about running pace - what it is, how it differs from speed, and why it matters for your training.',
+    type: 'article',
+    publishedTime: '2024-01-15T00:00:00.000Z',
+    authors: ['Oleg'],
+    tags: ['running', 'pace', 'training', 'tempo', 'easy pace', 'race pace'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Understanding Running Pace: A Complete Guide',
+    description: 'Learn everything about running pace and why it matters for your training.',
+    creator: '@grgrnko',
+  },
+};
 
 export default function UnderstandingRunningPacePage() {
   return (
