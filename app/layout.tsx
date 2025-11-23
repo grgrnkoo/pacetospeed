@@ -26,11 +26,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Oleg', url: 'https://x.com/grgrnko' }],
   creator: 'Oleg',
   publisher: 'Pace to Speed',
-  icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-  },
   formatDetection: {
     email: false,
     address: false,
