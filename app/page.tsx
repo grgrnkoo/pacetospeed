@@ -233,16 +233,27 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            Pace ⇄ Speed
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            Runner's conversion tool
-          </p>
-        </div>
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex flex-col p-4">
+      {/* Header */}
+      <header className="w-full py-4 px-4 flex justify-end">
+        <a
+          href="/articles"
+          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium hover:cursor-pointer"
+        >
+          Articles
+        </a>
+      </header>
+
+      <div className="flex-1 flex items-center justify-center">
+        <div className="w-full max-w-md">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+              Pace to Speed Converter
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              Runner's conversion tool
+            </p>
+          </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 space-y-6">
           {/* Unit Toggle */}
@@ -302,29 +313,27 @@ export default function Home() {
           {mode === 'pace' ? renderSpeedField(false) : renderPaceField(false)}
         </div>
 
-        {/* Info section */}
-        {(paceMinutes || paceSeconds || speed) && (
-          <div className="mt-6 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
-            <div className="grid grid-cols-2 gap-4 text-center">
-              <div>
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                  {paceMinutes || '0'}:{(paceSeconds || '0').padStart(2, '0')}
-                </div>
-                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  min/{unitLabel}
-                </div>
+        {/* Info section - always visible */}
+        <div className="mt-6 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+          <div className="grid grid-cols-2 gap-4 text-center">
+            <div>
+              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                {paceMinutes || '0'}:{(paceSeconds || '0').padStart(2, '0')}
               </div>
-              <div>
-                <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-                  {speed || '0'}
-                </div>
-                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  {unitLabel}/h
-                </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                min/{unitLabel}
+              </div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                {speed || '0'}
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                {unitLabel}/h
               </div>
             </div>
           </div>
-        )}
+        </div>
 
         {/* Footer */}
         <footer className="mt-8 text-center">
@@ -340,6 +349,7 @@ export default function Home() {
             </a>
           </p>
         </footer>
+        </div>
       </div>
     </div>
   );
