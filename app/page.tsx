@@ -233,7 +233,7 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -249,7 +249,7 @@ export default function Home() {
           <div className="flex justify-center">
             <button
               onClick={handleUnitSwitch}
-              className="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700 p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-600"
+              className="hover:cursor-pointer inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700 p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               <span
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
@@ -279,7 +279,7 @@ export default function Home() {
           <div className="flex justify-center">
             <button
               onClick={handleSwap}
-              className="group p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all hover:shadow-xl hover:scale-110 active:scale-95"
+              className="hover:cursor-pointer group p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all hover:shadow-xl hover:scale-110 active:scale-95"
               aria-label="Swap pace and speed"
             >
               <svg
@@ -325,6 +325,21 @@ export default function Home() {
             </div>
           </div>
         )}
+
+        {/* Footer */}
+        <footer className="mt-8 text-center">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            built by{' '}
+            <a
+              href="https://x.com/grgrnko"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-500 transition-colors underline hover:cursor-pointer"
+            >
+              oleg
+            </a>
+          </p>
+        </footer>
       </div>
     </div>
   );
