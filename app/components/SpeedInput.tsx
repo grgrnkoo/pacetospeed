@@ -3,7 +3,7 @@ export default function SpeedInput({ value, onChange }: { value: string, onChang
   if (value.length === 0) {
     speedWidth = '2.2em';
   } else {
-    speedWidth = `${value.length * 0.5 + 0.35}em`;
+    speedWidth = `${value.length * 0.5 + 0.3}em`;
   }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let v = e.target.value;
