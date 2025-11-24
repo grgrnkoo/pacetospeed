@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -83,7 +79,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
+        className={`${inter.variable} antialiased min-h-screen`}
       >
         {/* Google Analytics */}
         <Script
@@ -98,8 +94,11 @@ export default function RootLayout({
             gtag('config', 'G-F4M6TDBQQH');
           `}
         </Script>
-        <Header />
-        {children}
+        <div className="flex-1 w-full min-h-screen bg-linear-to-br from-slate-150 to-stone-100 flex flex-col items-center justify-center p-3 md:pt-20 pt-16">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

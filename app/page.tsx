@@ -2,38 +2,27 @@
 
 import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import RenderPaceField from '@/app/components/RenderPaceField';
+import RenderSpeedField from '@/app/components/RenderSpeedField';
 
 type Unit = 'km' | 'mile';
-type Mode = 'pace' | 'speed';
+export type PaceFormat = `${number}:${number}` | '';
 
 function ConverterContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   // State management
   const [unit, setUnit] = useState<Unit>('km');
-  const [mode, setMode] = useState<Mode>('pace'); // 'pace' means pace is on top
-  const [paceMinutes, setPaceMinutes] = useState<string>('');
-  const [paceSeconds, setPaceSeconds] = useState<string>('');
+  const [pace, setPace] = useState<PaceFormat>('');
   const [speed, setSpeed] = useState<string>('');
 
   // Initialize from URL on mount
   useEffect(() => {
     const urlUnit = searchParams.get('unit');
-    const urlMode = searchParams.get('mode');
-    const urlPaceMin = searchParams.get('paceMin');
-    const urlPaceSec = searchParams.get('paceSec');
-    const urlSpeed = searchParams.get('speed');
-
     if (urlUnit === 'km' || urlUnit === 'mile') {
       setUnit(urlUnit);
     }
-    if (urlMode === 'pace' || urlMode === 'speed') {
-      setMode(urlMode);
-    }
-    if (urlPaceMin) setPaceMinutes(urlPaceMin);
-    if (urlPaceSec) setPaceSeconds(urlPaceSec);
-    if (urlSpeed) setSpeed(urlSpeed);
   }, [searchParams]);
 
   // Update URL with current state (debounced)
@@ -51,6 +40,12 @@ function ConverterContent() {
 
   // Conversion logic
   const MILE_TO_KM = 1.60934;
+
+  const clampSpeed = (speed: number): number => {
+    if (speed < 0) return 0;
+    if (speed > 99.9) return 99.9;
+    return speed;
+  };
 
   const paceToSpeed = (minutes: number, seconds: number): number => {
     const totalMinutes = minutes + seconds / 60;
@@ -73,271 +68,109 @@ function ConverterContent() {
   };
 
   // Handle pace input changes (when pace is on top - editable)
-  const handlePaceChange = (minutes: string, seconds: string) => {
-    setPaceMinutes(minutes);
-    setPaceSeconds(seconds);
+  const handlePaceChange = (pace: PaceFormat) => {
+    setPace(pace);
 
-    const min = parseInt(minutes) || 0;
-    const sec = parseInt(seconds) || 0;
+    const min = parseInt(pace.split(':')[0]) || 0;
+    const sec = parseInt(pace.split(':')[1]) || 0;
 
     if (min > 0 || sec > 0) {
       const calculatedSpeed = paceToSpeed(min, sec);
-      setSpeed(calculatedSpeed.toFixed(2));
-      updateURL({
-        unit,
-        mode: 'pace',
-        paceMin: minutes,
-        paceSec: seconds,
-        speed: calculatedSpeed.toFixed(2),
-      });
+      const clampedSpeed = clampSpeed(calculatedSpeed);
+      setSpeed(clampedSpeed.toFixed(1));
     } else {
       setSpeed('');
-      updateURL({ unit, mode: 'pace', paceMin: '', paceSec: '', speed: '' });
     }
   };
 
   // Handle speed input changes (when speed is on top - editable)
   const handleSpeedChange = (value: string) => {
+    console.log('value', value);
+
     setSpeed(value);
 
     const speedValue = parseFloat(value);
-    if (speedValue > 0) {
+
+    // Only calculate pace if we have a valid number
+    if (!isNaN(speedValue) && speedValue > 0) {
+      console.log('speedValue', speedValue);
+
       const { minutes, seconds } = speedToPace(speedValue);
-      setPaceMinutes(minutes.toString());
-      setPaceSeconds(seconds.toString());
-      updateURL({
-        unit,
-        mode: 'speed',
-        paceMin: minutes.toString(),
-        paceSec: seconds.toString(),
-        speed: value,
-      });
+      setPace(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}` as PaceFormat);
     } else {
-      setPaceMinutes('');
-      setPaceSeconds('');
-      updateURL({ unit, mode: 'speed', paceMin: '', paceSec: '', speed: '' });
+      setPace('');
     }
   };
 
   // Handle unit switch
   const handleUnitSwitch = () => {
     const newUnit: Unit = unit === 'km' ? 'mile' : 'km';
-    
+
     // Convert current values to new unit
     const speedValue = parseFloat(speed);
     if (speedValue > 0) {
       const convertedSpeed = convertUnit(speedValue, unit, newUnit);
-      setSpeed(convertedSpeed.toFixed(2));
-      
-      const { minutes, seconds } = speedToPace(convertedSpeed);
-      setPaceMinutes(minutes.toString());
-      setPaceSeconds(seconds.toString());
-      
+      const clampedSpeed = clampSpeed(convertedSpeed);
+      setSpeed(clampedSpeed.toFixed(1));
+
+      const { minutes, seconds } = speedToPace(clampedSpeed);
+      setPace(`${minutes}:${seconds}` as PaceFormat);
+
       updateURL({
         unit: newUnit,
-        mode,
-        paceMin: minutes.toString(),
-        paceSec: seconds.toString(),
-        speed: convertedSpeed.toFixed(2),
       });
     } else {
-      updateURL({ unit: newUnit, mode, paceMin: '', paceSec: '', speed: '' });
+      updateURL({ unit: newUnit, paceMin: '', paceSec: '', speed: '' });
     }
-    
-    setUnit(newUnit);
-  };
 
-  // Handle swap (switch positions of pace and speed)
-  const handleSwap = () => {
-    const newMode: Mode = mode === 'pace' ? 'speed' : 'pace';
-    setMode(newMode);
-    updateURL({
-      unit,
-      mode: newMode,
-      paceMin: paceMinutes,
-      paceSec: paceSeconds,
-      speed,
-    });
+    setUnit(newUnit);
   };
 
   const unitLabel = unit === 'km' ? 'km' : 'mi';
   const unitLabelLong = unit === 'km' ? 'kilometer' : 'mile';
 
-  // Render pace input field
-  const renderPaceField = (isEditable: boolean) => (
-    <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-        Pace (min/{unitLabel})
-      </label>
-      <div className="flex items-center gap-2">
-        <input
-          type="number"
-          min="0"
-          max="99"
-          value={paceMinutes}
-          onChange={(e) => isEditable && handlePaceChange(e.target.value, paceSeconds)}
-          placeholder="5"
-          readOnly={!isEditable}
-          className={`flex-1 px-4 py-3 rounded-lg border ${
-            isEditable
-              ? 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-              : 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 cursor-not-allowed'
-          } text-gray-900 dark:text-white outline-none transition-all`}
-        />
-        <span className="text-gray-500 dark:text-gray-400 font-medium">:</span>
-        <input
-          type="number"
-          min="0"
-          max="59"
-          value={paceSeconds}
-          onChange={(e) => isEditable && handlePaceChange(paceMinutes, e.target.value)}
-          placeholder="30"
-          readOnly={!isEditable}
-          className={`flex-1 px-4 py-3 rounded-lg border ${
-            isEditable
-              ? 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-              : 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 cursor-not-allowed'
-          } text-gray-900 dark:text-white outline-none transition-all`}
-        />
-      </div>
-      <p className="text-xs text-gray-500 dark:text-gray-400">
-        minutes : seconds per {unitLabelLong}
-      </p>
-    </div>
-  );
-
-  // Render speed input field
-  const renderSpeedField = (isEditable: boolean) => (
-    <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-        Speed ({unitLabel}/h)
-      </label>
-      <input
-        type="number"
-        step="0.01"
-        min="0"
-        value={speed}
-        onChange={(e) => isEditable && handleSpeedChange(e.target.value)}
-        placeholder="10.91"
-        readOnly={!isEditable}
-        className={`w-full px-4 py-3 rounded-lg border ${
-          isEditable
-            ? 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-            : 'border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 cursor-not-allowed'
-        } text-gray-900 dark:text-white outline-none transition-all`}
-      />
-      <p className="text-xs text-gray-500 dark:text-gray-400">
-        {unitLabel === 'km' ? 'kilometers' : 'miles'} per hour
-      </p>
-    </div>
-  );
-
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-3 md:p-4 pt-16 md:pt-0">
-      <div className="w-full max-w-md">
-        <div className="text-center mb-4 md:mb-6">
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1 md:mb-2">
+    <div className="flex-1 flex w-full mx-auto items-center justify-start lg:max-w-4xl sm:max-w-3xl px-4">
+      <div className="w-full max-w-lg">
+        <div className="mb-4 lg:mb-6">
+          <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Pace to Speed Converter
           </h1>
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
+          <p className="text-sm lg:text-base text-stone-800">
             Runner's conversion tool
           </p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-4 md:p-6 space-y-4 md:space-y-6">
+        <div className="lg:text-9xl sm:text-6xl text-4xl font-extrabold" style={{ letterSpacing: '-6%' }}>
           {/* Unit Toggle */}
-          <div className="flex justify-center">
-            <button
-              onClick={handleUnitSwitch}
-              className="hover:cursor-pointer inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700 p-1 transition-all hover:bg-gray-200 dark:hover:bg-gray-600"
+          <div
+            className="flex justify-center hover:cursor-pointer w-fit"
+            onClick={handleUnitSwitch}
+          >
+            <span
+              className={`pr-4 py-2 rounded-full lg:text-5xl sm:text-3xl text-xl font-extrabold transition-all select-none ${unit === 'km'
+                ? 'text-stone-800'
+                : 'text-stone-400'
+                }`}
             >
-              <span
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  unit === 'km'
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'text-gray-700 dark:text-gray-300'
+              km
+            </span>
+            <span
+              className={`pl-4 py-2 rounded-full lg:text-5xl sm:text-3xl text-xl font-extrabold transition-all select-none ${unit === 'km'
+                ? 'text-stone-400'
+                : 'text-stone-800'
                 }`}
-              >
-                Kilometers
-              </span>
-              <span
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  unit === 'mile'
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'text-gray-700 dark:text-gray-300'
-                }`}
-              >
-                Miles
-              </span>
-            </button>
+            >
+              mi
+            </span>
           </div>
 
-          {/* Top Field (Editable) */}
-          {mode === 'pace' ? renderPaceField(true) : renderSpeedField(true)}
+          <RenderSpeedField unitLabel={unitLabel} speed={speed} handleSpeedChange={handleSpeedChange} />
 
-          {/* Swap Button */}
-          <div className="flex justify-center">
-            <button
-              onClick={handleSwap}
-              className="hover:cursor-pointer group p-2 md:p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg transition-all hover:shadow-xl hover:scale-110 active:scale-95"
-              aria-label="Swap pace and speed"
-            >
-              <svg
-                className={`w-5 h-5 md:w-6 md:h-6 transition-transform duration-500 ${
-                  mode === 'speed' ? 'rotate-180' : ''
-                }`}
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-              </svg>
-            </button>
-          </div>
+          <RenderPaceField unitLabel={unitLabel} pace={pace} handlePaceChange={handlePaceChange} />
 
-          {/* Bottom Field (Read-only) */}
-          {mode === 'pace' ? renderSpeedField(false) : renderPaceField(false)}
+
         </div>
-
-        {/* Info section - always visible */}
-        <div className="mt-3 md:mt-4 p-3 md:p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
-          <div className="grid grid-cols-2 gap-3 md:gap-4 text-center">
-            <div>
-              <div className="text-xl md:text-2xl font-bold text-blue-600 dark:text-blue-400">
-                {paceMinutes || '0'}:{(paceSeconds || '0').padStart(2, '0')}
-              </div>
-              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                min/{unitLabel}
-              </div>
-            </div>
-            <div>
-              <div className="text-xl md:text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-                {speed || '0'}
-              </div>
-              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                {unitLabel}/h
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <footer className="mt-3 md:mt-6 text-center">
-          <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
-            built by{' '}
-            <a
-              href="https://x.com/grgrnko"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-500 transition-colors underline hover:cursor-pointer"
-            >
-              oleg
-            </a>
-          </p>
-        </footer>
       </div>
     </div>
   );
@@ -345,10 +178,10 @@ function ConverterContent() {
 
 function LoadingFallback() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center">
+    <div className="flex-1 flex w-full mx-auto items-center justify-center lg:max-w-4xl sm:max-w-3xl px-4">
       <div className="text-center">
-        <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <p className="text-gray-600 dark:text-gray-400">Loading converter...</p>
+        <div className="w-24 h-24 border-8 border-stone-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-stone-800 text-2xl font-extrabold">Loading converter...</p>
       </div>
     </div>
   );
