@@ -114,7 +114,7 @@ function ConverterContent() {
       setSpeed(clampedSpeed.toFixed(1));
 
       const { minutes, seconds } = speedToPace(clampedSpeed);
-      setPace(`${minutes}:${seconds}` as PaceFormat);
+      setPace(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}` as PaceFormat);
 
       updateURL({
         unit: newUnit,
