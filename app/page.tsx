@@ -6,7 +6,7 @@ import RenderPaceField from '@/app/components/RenderPaceField';
 import RenderSpeedField from '@/app/components/RenderSpeedField';
 
 type Unit = 'km' | 'mile';
-export type PaceFormat = `${number}:${number}` | '';
+// export type PaceFormat = `${number}:${number}` | '';
 
 function ConverterContent() {
   const router = useRouter();
@@ -14,7 +14,8 @@ function ConverterContent() {
 
   // State management
   const [unit, setUnit] = useState<Unit>('km');
-  const [pace, setPace] = useState<PaceFormat>('');
+  // const [pace, setPace] = useState<PaceFormat>('');
+  const [pace, setPace] = useState<string>('');
   const [speed, setSpeed] = useState<string>('');
 
   // Initialize from URL on mount
@@ -68,9 +69,9 @@ function ConverterContent() {
   };
 
   // Handle pace input changes (when pace is on top - editable)
-  const handlePaceChange = (pace: PaceFormat) => {
+  const handlePaceChange = (pace: string) => {
     setPace(pace);
-
+    
     const min = parseInt(pace.split(':')[0]) || 0;
     const sec = parseInt(pace.split(':')[1]) || 0;
 
@@ -96,7 +97,7 @@ function ConverterContent() {
       console.log('speedValue', speedValue);
 
       const { minutes, seconds } = speedToPace(speedValue);
-      setPace(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}` as PaceFormat);
+      setPace(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
     } else {
       setPace('');
     }
@@ -114,7 +115,7 @@ function ConverterContent() {
       setSpeed(clampedSpeed.toFixed(1));
 
       const { minutes, seconds } = speedToPace(clampedSpeed);
-      setPace(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}` as PaceFormat);
+      setPace(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
 
       updateURL({
         unit: newUnit,

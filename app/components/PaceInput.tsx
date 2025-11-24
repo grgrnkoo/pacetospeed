@@ -1,24 +1,67 @@
-import { useEffect } from "react";
-import { PaceFormat } from "../page";
+import { useEffect, useRef } from "react";
 
 export default function PaceInput({
     pace,
     setPace,
 }: {
-    pace: PaceFormat;
-    setPace: (pace: PaceFormat) => void;
+    pace: string;
+    setPace: (pace: string) => void;
 }) {
+    const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+    const validateAndCorrectPace = (paceValue: string) => {
+        const parts = paceValue.split(':');
+        let minutes = parseInt(parts[0] || '0', 10);
+        let seconds = parseInt(parts[1] || '0', 10);
+
+        // Roll over excess seconds into minutes
+        if (seconds >= 60) {
+            minutes += Math.floor(seconds / 60);
+            seconds = seconds % 60;
+        }
+
+        // Clamp minutes to 99
+        if (minutes > 99) {
+            minutes = 99;
+            seconds = 59;
+        }
+
+        const correctedPace = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        if (correctedPace !== paceValue) {
+            setPace(correctedPace);
+        }
+    };
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let v = e.target.value.replace(/\D/g, ""); // only digits
-        if (v.length > 4) v = v.slice(-4); // keep last 4 digits
+        
+        // Check if we already have 4 actual digits with non-zero first digit
+        // If so, cap at 4 digits (prevent further input)
+        const currentDigits = pace.replace(/\D/g, "");
+        const hasCompleteInput = currentDigits.length >= 4 && currentDigits[0] !== '0';
+        
+        if (hasCompleteInput && v.length > 4) {
+            return; // Don't allow more input
+        }
+        
         v = v.padStart(4, "0");
+        if (v.length > 4) v = v.slice(-4); // keep last 4 digits
 
         let minutes = v.slice(0, 2);
         let seconds = v.slice(2, 4);
 
-        if (parseInt(seconds, 10) > 59) seconds = "59";
+        const newPace = `${minutes}:${seconds}`;
+        setPace(newPace);
 
-        setPace(`${minutes}:${seconds}` as PaceFormat);
+        // Clear existing timer
+        if (validationTimerRef.current) {
+            clearTimeout(validationTimerRef.current);
+        }
+
+        // Set new timer to validate after 1 second
+        validationTimerRef.current = setTimeout(() => {
+            validateAndCorrectPace(newPace);
+        }, 500);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -29,7 +72,7 @@ export default function PaceInput({
             const newDigits = digits.slice(0, -1).padStart(4, "0");
             const minutes = newDigits.slice(0, 2);
             const seconds = newDigits.slice(2, 4);
-            setPace(`${minutes}:${seconds}` as PaceFormat);
+            setPace(`${minutes}:${seconds}`);
         }
     };
 
@@ -37,7 +80,16 @@ export default function PaceInput({
         if (pace === '00:00') {
             setPace('');
         }
-    }, [pace]);
+    }, [pace, setPace]);
+
+    // Cleanup timer on unmount
+    useEffect(() => {
+        return () => {
+            if (validationTimerRef.current) {
+                clearTimeout(validationTimerRef.current);
+            }
+        };
+    }, []);
 
     return (
         <input

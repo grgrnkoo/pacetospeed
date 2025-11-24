@@ -1,7 +1,7 @@
-import { PaceFormat } from "../page";
+// import { PaceFormat } from "../page";
 import PaceInput from "./PaceInput";
 
-export default function RenderPaceField({ unitLabel, pace, handlePaceChange }: { unitLabel: string, pace: PaceFormat, handlePaceChange: (pace: PaceFormat) => void }) {
+export default function RenderPaceField({ unitLabel, pace, handlePaceChange }: { unitLabel: string, pace: string, handlePaceChange: (pace: string) => void }) {
     return (
         <div 
         className="space-y-2 flex w-fit align-bottom"
