@@ -185,7 +185,7 @@ export default async function DistanceFinishTimePage({ params }: PageProps) {
         <div className="flex-1 flex w-full mx-auto items-center justify-start lg:max-w-4xl sm:max-w-3xl px-4">
             <div className="w-full max-w-lg">
                 <DistanceHeader config={distanceConfig} />
-                <Suspense fallback={<div className="text-stone-400">Loading...</div>}>
+                <Suspense fallback={<LoadingFallback />}>
                     <FinishTimeCalculator 
                         distanceKm={distanceConfig.km}
                         distanceMiles={distanceConfig.miles}
