@@ -3,6 +3,8 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://pacetospeed.xyz';
   
+  const distances = ['5k', '10k', 'half-marathon', 'marathon', '50k', '100k', 'custom'];
+  
   return [
     {
       url: baseUrl,
@@ -10,6 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
+    {
+      url: `${baseUrl}/finish-time`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    ...distances.map(distance => ({
+      url: `${baseUrl}/finish-time/${distance}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/articles`,
       lastModified: new Date(),

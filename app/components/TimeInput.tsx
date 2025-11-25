@@ -1,0 +1,127 @@
+import { useEffect, useRef } from "react";
+
+export default function TimeInput({
+    time,
+    setTime,
+}: {
+    time: string;
+    setTime: (time: string) => void;
+}) {
+    const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+    const validateAndCorrectTime = (timeValue: string) => {
+        const parts = timeValue.split(':');
+        let hours = parseInt(parts[0] || '0', 10);
+        let minutes = parseInt(parts[1] || '0', 10);
+        let seconds = parseInt(parts[2] || '0', 10);
+
+        // Roll over excess seconds into minutes
+        if (seconds >= 60) {
+            minutes += Math.floor(seconds / 60);
+            seconds = seconds % 60;
+        }
+
+        // Roll over excess minutes into hours
+        if (minutes >= 60) {
+            hours += Math.floor(minutes / 60);
+            minutes = minutes % 60;
+        }
+
+        // Clamp hours to 99
+        if (hours > 99) {
+            hours = 99;
+            minutes = 59;
+            seconds = 59;
+        }
+
+        const correctedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        if (correctedTime !== timeValue) {
+            setTime(correctedTime);
+        }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        let v = e.target.value.replace(/\D/g, ""); // only digits
+        
+        // Cap at 6 digits
+        if (v.length > 6) {
+            v = v.slice(-6); // keep last 6 digits
+        }
+        
+        v = v.padStart(6, "0");
+
+        let hours = v.slice(0, 2);
+        let minutes = v.slice(2, 4);
+        let seconds = v.slice(4, 6);
+
+        const newTime = `${hours}:${minutes}:${seconds}`;
+        setTime(newTime);
+
+        // Clear existing timer
+        if (validationTimerRef.current) {
+            clearTimeout(validationTimerRef.current);
+        }
+
+        // Set new timer to validate after 500ms
+        validationTimerRef.current = setTimeout(() => {
+            validateAndCorrectTime(newTime);
+        }, 500);
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        // Handle backspace to remove digits from right
+        if (e.key === "Backspace") {
+            e.preventDefault();
+            const digits = time.replace(/\D/g, "");
+            const newDigits = digits.slice(0, -1).padStart(6, "0");
+            const hours = newDigits.slice(0, 2);
+            const minutes = newDigits.slice(2, 4);
+            const seconds = newDigits.slice(4, 6);
+            setTime(`${hours}:${minutes}:${seconds}`);
+        }
+    };
+
+    useEffect(() => {
+        if (time === '00:00:00') {
+            setTime('');
+        }
+    }, [time, setTime]);
+
+    // Cleanup timer on unmount
+    useEffect(() => {
+        return () => {
+            if (validationTimerRef.current) {
+                clearTimeout(validationTimerRef.current);
+            }
+        };
+    }, []);
+
+    return (
+        <input
+            type="text"
+            inputMode="numeric"
+            value={time}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            className="
+        w-[4.5em]
+        relative
+        lg:bottom-3
+        sm:bottom-1.5
+        bottom-1
+        bg-transparent
+        text-stone-800
+        placeholder:text-stone-400
+        border-none
+        outline-none
+        ring-0
+        focus:outline-none
+        focus:ring-0
+        focus:border-none
+        focus-visible:outline-none
+      "
+            placeholder="03:52:03"
+        />
+    );
+}
+

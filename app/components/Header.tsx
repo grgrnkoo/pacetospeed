@@ -21,6 +21,28 @@ export default function Header() {
             className="w-10 h-10 md:w-12 md:h-12 rounded-full"
           />
         </Link>
+        <nav className="flex gap-4">
+          <Link
+            href="/"
+            className={`text-sm md:text-lg font-extrabold transition-colors ${
+              pathname === '/' 
+                ? 'text-stone-800' 
+                : 'text-stone-600 hover:text-stone-800'
+            }`}
+          >
+            converter
+          </Link>
+          <Link
+            href="/finish-time"
+            className={`text-sm md:text-lg font-extrabold transition-colors ${
+              pathname?.startsWith('/finish-time') 
+                ? 'text-stone-800' 
+                : 'text-stone-600 hover:text-stone-800'
+            }`}
+          >
+            finish time
+          </Link>
+        </nav>
       </div>
     </header>
   );
