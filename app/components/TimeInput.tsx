@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function TimeInput({
     time,
@@ -7,7 +7,14 @@ export default function TimeInput({
     time: string;
     setTime: (time: string) => void;
 }) {
+    const [localTime, setLocalTime] = useState(time);
     const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
+    const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+    
+    // Sync local state when prop changes from parent
+    useEffect(() => {
+        setLocalTime(time);
+    }, [time]);
 
     const validateAndCorrectTime = (timeValue: string) => {
         const parts = timeValue.split(':');
@@ -43,6 +50,15 @@ export default function TimeInput({
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let v = e.target.value.replace(/\D/g, ""); // only digits
         
+        // Check if we already have 6 actual digits with non-zero first digit
+        // If so, cap at 6 digits (prevent further input)
+        const currentDigits = localTime.replace(/\D/g, "");
+        const hasCompleteInput = currentDigits.length >= 6 && currentDigits[0] !== '0';
+        
+        if (hasCompleteInput && v.length > 6) {
+            return; // Don't allow more input
+        }
+        
         // Cap at 6 digits
         if (v.length > 6) {
             v = v.slice(-6); // keep last 6 digits
@@ -55,12 +71,20 @@ export default function TimeInput({
         let seconds = v.slice(4, 6);
 
         const newTime = `${hours}:${minutes}:${seconds}`;
-        setTime(newTime);
+        setLocalTime(newTime);
 
-        // Clear existing timer
+        // Clear existing timers
         if (validationTimerRef.current) {
             clearTimeout(validationTimerRef.current);
         }
+        if (debounceTimerRef.current) {
+            clearTimeout(debounceTimerRef.current);
+        }
+
+        // Debounce callback to parent
+        debounceTimerRef.current = setTimeout(() => {
+            setTime(newTime);
+        }, 500);
 
         // Set new timer to validate after 500ms
         validationTimerRef.current = setTimeout(() => {
@@ -72,26 +96,41 @@ export default function TimeInput({
         // Handle backspace to remove digits from right
         if (e.key === "Backspace") {
             e.preventDefault();
-            const digits = time.replace(/\D/g, "");
+            const digits = localTime.replace(/\D/g, "");
             const newDigits = digits.slice(0, -1).padStart(6, "0");
             const hours = newDigits.slice(0, 2);
             const minutes = newDigits.slice(2, 4);
             const seconds = newDigits.slice(4, 6);
-            setTime(`${hours}:${minutes}:${seconds}`);
+            const newTime = `${hours}:${minutes}:${seconds}`;
+            setLocalTime(newTime);
+            
+            // Clear existing timers
+            if (debounceTimerRef.current) {
+                clearTimeout(debounceTimerRef.current);
+            }
+            
+            // Debounce callback to parent
+            debounceTimerRef.current = setTimeout(() => {
+                setTime(newTime);
+            }, 150);
         }
     };
 
     useEffect(() => {
-        if (time === '00:00:00') {
+        if (localTime === '00:00:00') {
+            setLocalTime('');
             setTime('');
         }
-    }, [time, setTime]);
+    }, [localTime, setTime]);
 
-    // Cleanup timer on unmount
+    // Cleanup timers on unmount
     useEffect(() => {
         return () => {
             if (validationTimerRef.current) {
                 clearTimeout(validationTimerRef.current);
+            }
+            if (debounceTimerRef.current) {
+                clearTimeout(debounceTimerRef.current);
             }
         };
     }, []);
@@ -100,7 +139,7 @@ export default function TimeInput({
         <input
             type="text"
             inputMode="numeric"
-            value={time}
+            value={localTime}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
             className="

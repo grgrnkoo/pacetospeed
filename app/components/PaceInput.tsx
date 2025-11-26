@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function PaceInput({
     pace,
@@ -7,7 +7,14 @@ export default function PaceInput({
     pace: string;
     setPace: (pace: string) => void;
 }) {
+    const [localPace, setLocalPace] = useState(pace);
     const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
+    const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+    
+    // Sync local state when prop changes from parent
+    useEffect(() => {
+        setLocalPace(pace);
+    }, [pace]);
 
     const validateAndCorrectPace = (paceValue: string) => {
         const parts = paceValue.split(':');
@@ -37,7 +44,7 @@ export default function PaceInput({
         
         // Check if we already have 4 actual digits with non-zero first digit
         // If so, cap at 4 digits (prevent further input)
-        const currentDigits = pace.replace(/\D/g, "");
+        const currentDigits = localPace.replace(/\D/g, "");
         const hasCompleteInput = currentDigits.length >= 4 && currentDigits[0] !== '0';
         
         if (hasCompleteInput && v.length > 4) {
@@ -51,14 +58,22 @@ export default function PaceInput({
         let seconds = v.slice(2, 4);
 
         const newPace = `${minutes}:${seconds}`;
-        setPace(newPace);
+        setLocalPace(newPace);
 
-        // Clear existing timer
+        // Clear existing timers
         if (validationTimerRef.current) {
             clearTimeout(validationTimerRef.current);
         }
+        if (debounceTimerRef.current) {
+            clearTimeout(debounceTimerRef.current);
+        }
 
-        // Set new timer to validate after 1 second
+        // Debounce callback to parent
+        debounceTimerRef.current = setTimeout(() => {
+            setPace(newPace);
+        }, 500);
+
+        // Set new timer to validate after 500ms
         validationTimerRef.current = setTimeout(() => {
             validateAndCorrectPace(newPace);
         }, 500);
@@ -68,25 +83,40 @@ export default function PaceInput({
         // Handle backspace to remove digits from right
         if (e.key === "Backspace") {
             e.preventDefault();
-            const digits = pace.replace(/\D/g, "");
+            const digits = localPace.replace(/\D/g, "");
             const newDigits = digits.slice(0, -1).padStart(4, "0");
             const minutes = newDigits.slice(0, 2);
             const seconds = newDigits.slice(2, 4);
-            setPace(`${minutes}:${seconds}`);
+            const newPace = `${minutes}:${seconds}`;
+            setLocalPace(newPace);
+            
+            // Clear existing timers
+            if (debounceTimerRef.current) {
+                clearTimeout(debounceTimerRef.current);
+            }
+            
+            // Debounce callback to parent
+            debounceTimerRef.current = setTimeout(() => {
+                setPace(newPace);
+            }, 150);
         }
     };
 
     useEffect(() => {
-        if (pace === '00:00') {
+        if (localPace === '00:00') {
+            setLocalPace('');
             setPace('');
         }
-    }, [pace, setPace]);
+    }, [localPace, setPace]);
 
-    // Cleanup timer on unmount
+    // Cleanup timers on unmount
     useEffect(() => {
         return () => {
             if (validationTimerRef.current) {
                 clearTimeout(validationTimerRef.current);
+            }
+            if (debounceTimerRef.current) {
+                clearTimeout(debounceTimerRef.current);
             }
         };
     }, []);
@@ -95,7 +125,7 @@ export default function PaceInput({
         <input
             type="text"
             inputMode="numeric"
-            value={pace}
+            value={localPace}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
             className="

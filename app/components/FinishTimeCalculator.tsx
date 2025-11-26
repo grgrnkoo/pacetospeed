@@ -56,9 +56,28 @@ export default function FinishTimeCalculator({ distanceKm, distanceMiles }: Fini
         const paceInMinutes = minutes + seconds / 60;
         const totalMinutes = paceInMinutes * distanceKm;
         
-        const hours = Math.floor(totalMinutes / 60);
-        const mins = Math.floor(totalMinutes % 60);
-        const secs = Math.round((totalMinutes % 1) * 60);
+        let hours = Math.floor(totalMinutes / 60);
+        let mins = Math.floor(totalMinutes % 60);
+        let secs = Math.round((totalMinutes % 1) * 60);
+
+        // Handle seconds overflow
+        if (secs >= 60) {
+            mins += 1;
+            secs = 0;
+        }
+
+        // Handle minutes overflow
+        if (mins >= 60) {
+            hours += 1;
+            mins = 0;
+        }
+
+        // Cap at 99:59:59
+        if (hours > 99) {
+            hours = 99;
+            mins = 59;
+            secs = 59;
+        }
 
         return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     }, []);
@@ -77,8 +96,20 @@ export default function FinishTimeCalculator({ distanceKm, distanceMiles }: Fini
         const totalMinutes = hours * 60 + minutes + seconds / 60;
         const paceInMinutes = totalMinutes / distanceKm;
         
-        const paceMinutes = Math.floor(paceInMinutes);
-        const paceSeconds = Math.round((paceInMinutes % 1) * 60);
+        let paceMinutes = Math.floor(paceInMinutes);
+        let paceSeconds = Math.round((paceInMinutes % 1) * 60);
+
+        // Handle seconds overflow
+        if (paceSeconds >= 60) {
+            paceMinutes += 1;
+            paceSeconds = 0;
+        }
+
+        // Cap at 99:59
+        if (paceMinutes > 99) {
+            paceMinutes = 99;
+            paceSeconds = 59;
+        }
 
         return `${paceMinutes.toString().padStart(2, '0')}:${paceSeconds.toString().padStart(2, '0')}`;
     }, []);
@@ -99,8 +130,10 @@ export default function FinishTimeCalculator({ distanceKm, distanceMiles }: Fini
         setLastEdited('time');
         
         const distance = unit === 'km' ? distanceKm : distanceMiles;
-        const calculatedPace = calculatePaceFromTime(newTime, distance);
-        setPace(calculatedPace);
+        if (!isNaN(distance) && distance > 0) {
+            const calculatedPace = calculatePaceFromTime(newTime, distance);
+            setPace(calculatedPace);
+        }
     };
 
     // Handle unit switch
