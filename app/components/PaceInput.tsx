@@ -124,7 +124,6 @@ export default function PaceInput({
     return (
         <input
             type="text"
-            inputMode="numeric"
             value={localPace}
             onChange={handleChange}
             onKeyDown={handleKeyDown}

@@ -46,7 +46,6 @@ export default function SpeedInput({ value, onChange }: { value: string, onChang
   return (
     <input
       type="text"
-      inputMode="numeric"
       placeholder="10.9"
       value={value}
       onChange={handleChange}

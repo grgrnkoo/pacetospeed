@@ -138,7 +138,6 @@ export default function TimeInput({
     return (
         <input
             type="text"
-            inputMode="numeric"
             value={localTime}
             onChange={handleChange}
             onKeyDown={handleKeyDown}

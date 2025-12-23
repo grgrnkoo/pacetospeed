@@ -99,7 +99,6 @@ export default function DistanceInput({
     return (
         <input
             type="text"
-            inputMode="decimal"
             value={distance}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
