@@ -21,6 +21,60 @@ export default function ArticlesPage() {
   // List of articles
   const articles = [
     {
+      slug: 'pace-calculator-min-mile-to-min-km',
+      title: 'Pace Calculator: Convert Minutes per Mile to Minutes per Kilometer',
+      description: 'Learn how to convert min/mile to min/km with simple formulas, a quick reference table, and practical examples.',
+      date: '2026-03-10',
+    },
+    {
+      slug: 'running-pace-chart-by-age',
+      title: 'Running Pace Chart by Age and Ability (Beginner to Advanced)',
+      description: 'Find realistic running pace ranges by age and ability level with a simple chart and guidance for targets.',
+      date: '2026-03-09',
+    },
+    {
+      slug: 'good-5k-10k-half-marathon-pace',
+      title: 'What Is a Good 5K, 10K, or Half Marathon Pace? (Benchmarks + Tips)',
+      description: 'Benchmarks for good 5K, 10K, and half marathon paces with realistic ranges and how to pick a target.',
+      date: '2026-03-08',
+    },
+    {
+      slug: 'calculate-pace-from-time-distance',
+      title: 'How to Calculate Pace from Time and Distance (Step-by-Step)',
+      description: 'Learn the exact pace formula, see worked examples, and avoid common mistakes.',
+      date: '2026-03-07',
+    },
+    {
+      slug: 'race-time-predictor',
+      title: 'Race Time Predictor: Estimate Your Finish Time (5K to Marathon)',
+      description: 'Use simple pacing formulas to predict finish times for common race distances.',
+      date: '2026-03-06',
+    },
+    {
+      slug: 'negative-splits-guide',
+      title: 'Negative Splits: What They Are and How to Plan Them',
+      description: 'Learn why negative splits work and how to plan pacing for a strong finish.',
+      date: '2026-03-05',
+    },
+    {
+      slug: 'target-pace-calculator-goal-time',
+      title: 'Target Pace Calculator: How Fast You Need to Run for a Goal Time',
+      description: 'Calculate target pace for any goal time and distance with examples and tips.',
+      date: '2026-03-04',
+    },
+    {
+      slug: 'treadmill-pace-vs-outdoor',
+      title: 'Treadmill Pace vs Outdoor Pace: Why They Feel Different',
+      description: 'Understand why treadmill pace feels different and how to adjust for accurate effort.',
+      date: '2026-03-03',
+    },
+    {
+      slug: 'treadmill-incline-pace-conversion',
+      title: 'Treadmill Incline Pace Conversion: How to Adjust for Hills',
+      description: 'Use incline adjustments to better match outdoor effort on a treadmill.',
+      date: '2026-03-02',
+    },
+    {
       slug: 'running-pace-vs-speed',
       title: 'Running Pace vs Speed: What\'s the Difference and How to Convert Them',
       description: 'Understand the key differences between running pace and speed, learn why runners use both metrics, and master simple conversion methods.',
@@ -141,4 +195,3 @@ export default function ArticlesPage() {
     </div>
   );
 }
-

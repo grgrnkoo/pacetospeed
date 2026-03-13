@@ -170,7 +170,7 @@ export default async function DistanceFinishTimePage({ params }: PageProps) {
                             How fast you need to run to finish
                         </h1>
                         <p className="text-sm lg:text-base text-stone-800">
-                            Enter your custom race distance
+                            You need at least two values filled for calculations to work
                         </p>
                     </div>
                     <Suspense fallback={<LoadingFallback />}>
@@ -186,7 +186,7 @@ export default async function DistanceFinishTimePage({ params }: PageProps) {
             <div className="w-full max-w-lg">
                 <DistanceHeader config={distanceConfig} />
                 <Suspense fallback={<LoadingFallback />}>
-                    <FinishTimeCalculator 
+                    <FinishTimeCalculator
                         distanceKm={distanceConfig.km}
                         distanceMiles={distanceConfig.miles}
                     />
