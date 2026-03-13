@@ -1,0 +1,255 @@
+export interface ArticleEntry {
+  slug: string;
+  title: string;
+  description: string;
+  date: string; // YYYY-MM-DD
+}
+
+export const articles: ArticleEntry[] = [
+  {
+    slug: 'average-5k-time-by-age',
+    title: 'Average 5K Time by Age (Benchmarks + Pace Range)',
+    description: 'See realistic 5K time ranges by age group with pace equivalents and simple goal guidance.',
+    date: '2026-03-13',
+  },
+  {
+    slug: 'how-to-start-running-beginners',
+    title: 'How to Start Running: A Beginner-Friendly Guide',
+    description: 'A simple step-by-step guide for starting running safely, including a run-walk plan and pacing tips.',
+    date: '2026-03-13',
+  },
+  {
+    slug: 'how-to-breathe-while-running',
+    title: 'How to Breathe While Running (Simple Tips That Work)',
+    description: 'Learn easy breathing techniques for running, including rhythm, posture, and relaxation tips.',
+    date: '2026-03-12',
+  },
+  {
+    slug: 'best-running-shoes-how-to-choose',
+    title: 'Best Running Shoes: How to Choose the Right Pair',
+    description: 'A practical guide to choosing running shoes based on fit, mileage, and running style.',
+    date: '2026-03-12',
+  },
+  {
+    slug: 'running-warm-up-cool-down',
+    title: 'Running Warm-Up and Cool-Down: Simple Routines That Work',
+    description: 'Easy warm-up and cool-down routines to improve performance and reduce injury risk.',
+    date: '2026-03-11',
+  },
+  {
+    slug: 'run-walk-method-guide',
+    title: 'Run-Walk Method: A Simple Guide for New Runners',
+    description: 'Learn how the run-walk method works and how to use it to build endurance safely.',
+    date: '2026-03-10',
+  },
+  {
+    slug: 'how-to-avoid-shin-splints',
+    title: 'How to Avoid Shin Splints (Simple Prevention Guide)',
+    description: 'Practical steps to prevent shin splints, including training changes and recovery tips.',
+    date: '2026-03-09',
+  },
+  {
+    slug: 'how-to-track-running-distance',
+    title: 'How to Track Running Distance (GPS, Phone, and Treadmill)',
+    description: 'Compare the best ways to track running distance outdoors and indoors, with simple accuracy tips.',
+    date: '2026-03-08',
+  },
+  {
+    slug: 'how-many-calories-does-running-burn',
+    title: 'How Many Calories Does Running Burn? (Simple Estimates)',
+    description: 'Get simple calorie burn estimates for running based on distance, pace, and body weight.',
+    date: '2026-03-07',
+  },
+  {
+    slug: 'running-in-the-heat-tips',
+    title: 'Running in the Heat: Safety Tips and Pace Adjustments',
+    description: 'Learn how to run safely in hot weather with hydration, pacing, and timing strategies.',
+    date: '2026-03-06',
+  },
+  {
+    slug: 'average-1-mile-time-by-age',
+    title: 'Average 1 Mile Run Time by Age and Gender (With Pace Breakdown)',
+    description: 'See realistic average mile times by age group with pace conversions and goal guidance.',
+    date: '2026-03-13',
+  },
+  {
+    slug: '10k-training-plan-8-week',
+    title: '10K Training Plan: 8-Week Schedule for First-Timers',
+    description: 'Beginner-friendly 8-week 10K plan with weekly structure and pacing guidance.',
+    date: '2026-03-12',
+  },
+  {
+    slug: 'how-to-run-faster-5k',
+    title: 'How to Run a Faster 5K: 7 Practical Changes That Work',
+    description: 'Seven proven ways to improve your 5K time, from pacing to workouts and recovery.',
+    date: '2026-03-11',
+  },
+  {
+    slug: 'heart-rate-zones-for-running',
+    title: 'Heart Rate Zones for Running: How to Find Yours',
+    description: 'Learn what heart rate zones mean, how to estimate your max HR, and how to use zones in training.',
+    date: '2026-03-10',
+  },
+  {
+    slug: 'pace-calculator-min-mile-to-min-km',
+    title: 'Pace Calculator: Convert Minutes per Mile to Minutes per Kilometer',
+    description: 'Learn how to convert min/mile to min/km with simple formulas, a quick reference table, and practical examples.',
+    date: '2026-03-10',
+  },
+  {
+    slug: 'vo2-max-for-runners',
+    title: 'VO2 Max for Runners: What It Is and How to Improve It',
+    description: 'Learn what VO2 max means for runners and how to improve it with training.',
+    date: '2026-03-09',
+  },
+  {
+    slug: 'running-pace-chart-by-age',
+    title: 'Running Pace Chart by Age and Ability (Beginner to Advanced)',
+    description: 'Find realistic running pace ranges by age and ability level with a simple chart and guidance for targets.',
+    date: '2026-03-09',
+  },
+  {
+    slug: 'long-run-pace-guide',
+    title: 'Long Run Pace: How Slow Is Too Slow?',
+    description: 'Find the right long run pace to build endurance without overtraining.',
+    date: '2026-03-08',
+  },
+  {
+    slug: 'good-5k-10k-half-marathon-pace',
+    title: 'What Is a Good 5K, 10K, or Half Marathon Pace? (Benchmarks + Tips)',
+    description: 'Benchmarks for good 5K, 10K, and half marathon paces with realistic ranges and how to pick a target.',
+    date: '2026-03-08',
+  },
+  {
+    slug: 'calculate-pace-from-time-distance',
+    title: 'How to Calculate Pace from Time and Distance (Step-by-Step)',
+    description: 'Learn the exact pace formula, see worked examples, and avoid common mistakes.',
+    date: '2026-03-07',
+  },
+  {
+    slug: 'marathon-pacing-even-vs-negative',
+    title: 'Marathon Pacing Strategy: Even Splits vs Negative Splits',
+    description: 'Compare even splits and negative splits with pros, cons, and guidance.',
+    date: '2026-03-07',
+  },
+  {
+    slug: 'race-time-predictor',
+    title: 'Race Time Predictor: Estimate Your Finish Time (5K to Marathon)',
+    description: 'Use simple pacing formulas to predict finish times for common race distances.',
+    date: '2026-03-06',
+  },
+  {
+    slug: '5k-to-marathon-build-up',
+    title: '5K to Marathon: How to Build Up Safely (Mileage Progression Guide)',
+    description: 'A practical progression guide to safely increase weekly mileage.',
+    date: '2026-03-06',
+  },
+  {
+    slug: 'negative-splits-guide',
+    title: 'Negative Splits: What They Are and How to Plan Them',
+    description: 'Learn why negative splits work and how to plan pacing for a strong finish.',
+    date: '2026-03-05',
+  },
+  {
+    slug: 'running-cadence-what-it-means',
+    title: 'Cadence for Runners: What It Means and Why It Matters',
+    description: 'Understand running cadence, how it affects efficiency, and how to improve it.',
+    date: '2026-03-05',
+  },
+  {
+    slug: 'target-pace-calculator-goal-time',
+    title: 'Target Pace Calculator: How Fast You Need to Run for a Goal Time',
+    description: 'Calculate target pace for any goal time and distance with examples and tips.',
+    date: '2026-03-04',
+  },
+  {
+    slug: 'running-fueling-101',
+    title: 'Running Fueling 101: How to Eat and Drink for Race Day',
+    description: 'A simple race-day fueling guide for runners, including carbs, hydration, and timing.',
+    date: '2026-03-04',
+  },
+  {
+    slug: 'treadmill-pace-vs-outdoor',
+    title: 'Treadmill Pace vs Outdoor Pace: Why They Feel Different',
+    description: 'Understand why treadmill pace feels different and how to adjust for accurate effort.',
+    date: '2026-03-03',
+  },
+  {
+    slug: 'treadmill-incline-pace-conversion',
+    title: 'Treadmill Incline Pace Conversion: How to Adjust for Hills',
+    description: 'Use incline adjustments to better match outdoor effort on a treadmill.',
+    date: '2026-03-02',
+  },
+  {
+    slug: 'running-pace-vs-speed',
+    title: 'Running Pace vs Speed: What\'s the Difference and How to Convert Them',
+    description: 'Understand the key differences between running pace and speed, learn why runners use both metrics, and master simple conversion methods.',
+    date: '2025-11-23',
+  },
+  {
+    slug: 'how-to-calculate-running-distance',
+    title: 'How to Calculate Running Distance Based on Time and Pace (Simple Guide)',
+    description: 'Learn how to calculate running distance using time and pace with simple formulas, practical examples, and tips for accurate distance estimation.',
+    date: '2025-11-22',
+  },
+  {
+    slug: 'race-distance-conversions',
+    title: 'How Many Miles Is a 5K / 10K / Half Marathon / Marathon?',
+    description: 'Quick reference guide for converting common race distances from kilometers to miles with helpful pace planning tips.',
+    date: '2025-09-15',
+  },
+  {
+    slug: 'treadmill-distance-calculator',
+    title: 'How to Use a Distance Calculator for Treadmill Running Accuracy',
+    description: 'Learn how to accurately calculate distance on a treadmill and ensure your indoor running matches outdoor training goals.',
+    date: '2025-08-10',
+  },
+  {
+    slug: 'walking-distance-calories',
+    title: 'Convert Walking Distance to Calories: How Far Should You Walk Per Day?',
+    description: 'Learn how to calculate calories burned while walking and understand daily walking distance goals for fitness and weight loss.',
+    date: '2025-07-18',
+  },
+  {
+    slug: '5k-to-miles-conversion-table',
+    title: '5K to Miles Conversion Table (Pace, Time, Distance)',
+    description: 'Complete 5K conversion reference with pace charts, finish time tables, and split times for effective race planning.',
+    date: '2025-06-05',
+  },
+  {
+    slug: '10k-to-miles-conversion',
+    title: '10K to Miles: Exact Conversion + Pace Chart',
+    description: 'Complete 10K conversion guide with exact distance, pace charts, finish time tables, and split strategies for race success.',
+    date: '2025-05-12',
+  },
+  {
+    slug: 'half-marathon-pace-chart',
+    title: 'Half Marathon Pace Chart and Distance Explained',
+    description: 'Complete half marathon guide with exact distance, comprehensive pace charts, finish time tables, and race strategies for 13.1 miles.',
+    date: '2025-04-20',
+  },
+  {
+    slug: 'marathon-distance-explained',
+    title: 'Marathon Distance Explained: Why 42.195 km?',
+    description: 'Discover the fascinating history behind the marathon distance and why it is exactly 42.195 kilometers (26.2 miles).',
+    date: '2025-03-08',
+  },
+  {
+    slug: 'why-running-apps-dont-convert-pace',
+    title: 'Why Most Running Apps Don\'t Let You Convert Pace to Speed',
+    description: 'Explore why popular running apps lack pace-to-speed conversion features and why dedicated converter tools are essential.',
+    date: '2025-02-14',
+  },
+  {
+    slug: 'why-pace-to-speed-converter-is-must-have',
+    title: 'Why a Pace-to-Speed Converter Is a Must-Have Tool for Runners',
+    description: 'Discover how this simple tool makes training smarter, more consistent, and more enjoyable for runners at every level.',
+    date: '2024-01-20',
+  },
+  {
+    slug: 'understanding-running-pace',
+    title: 'Understanding Running Pace',
+    description: 'Learn how to calculate and use running pace for better training.',
+    date: '2024-01-15',
+  },
+];
