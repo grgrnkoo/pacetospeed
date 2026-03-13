@@ -21,6 +21,66 @@ export default function ArticlesPage() {
   // List of articles
   const articles = [
     {
+      slug: 'average-1-mile-time-by-age',
+      title: 'Average 1 Mile Run Time by Age and Gender (With Pace Breakdown)',
+      description: 'See realistic average mile times by age group with pace conversions and goal guidance.',
+      date: '2026-03-13',
+    },
+    {
+      slug: '10k-training-plan-8-week',
+      title: '10K Training Plan: 8-Week Schedule for First-Timers',
+      description: 'Beginner-friendly 8-week 10K plan with weekly structure and pacing guidance.',
+      date: '2026-03-12',
+    },
+    {
+      slug: 'how-to-run-faster-5k',
+      title: 'How to Run a Faster 5K: 7 Practical Changes That Work',
+      description: 'Seven proven ways to improve your 5K time, from pacing to workouts and recovery.',
+      date: '2026-03-11',
+    },
+    {
+      slug: 'heart-rate-zones-for-running',
+      title: 'Heart Rate Zones for Running: How to Find Yours',
+      description: 'Learn what heart rate zones mean, how to estimate your max HR, and how to use zones in training.',
+      date: '2026-03-10',
+    },
+    {
+      slug: 'vo2-max-for-runners',
+      title: 'VO2 Max for Runners: What It Is and How to Improve It',
+      description: 'Learn what VO2 max means for runners and how to improve it with training.',
+      date: '2026-03-09',
+    },
+    {
+      slug: 'long-run-pace-guide',
+      title: 'Long Run Pace: How Slow Is Too Slow?',
+      description: 'Find the right long run pace to build endurance without overtraining.',
+      date: '2026-03-08',
+    },
+    {
+      slug: 'marathon-pacing-even-vs-negative',
+      title: 'Marathon Pacing Strategy: Even Splits vs Negative Splits',
+      description: 'Compare even splits and negative splits with pros, cons, and guidance.',
+      date: '2026-03-07',
+    },
+    {
+      slug: '5k-to-marathon-build-up',
+      title: '5K to Marathon: How to Build Up Safely (Mileage Progression Guide)',
+      description: 'A practical progression guide to safely increase weekly mileage.',
+      date: '2026-03-06',
+    },
+    {
+      slug: 'running-cadence-what-it-means',
+      title: 'Cadence for Runners: What It Means and Why It Matters',
+      description: 'Understand running cadence, how it affects efficiency, and how to improve it.',
+      date: '2026-03-05',
+    },
+    {
+      slug: 'running-fueling-101',
+      title: 'Running Fueling 101: How to Eat and Drink for Race Day',
+      description: 'A simple race-day fueling guide for runners, including carbs, hydration, and timing.',
+      date: '2026-03-04',
+    },
+    {
       slug: 'pace-calculator-min-mile-to-min-km',
       title: 'Pace Calculator: Convert Minutes per Mile to Minutes per Kilometer',
       description: 'Learn how to convert min/mile to min/km with simple formulas, a quick reference table, and practical examples.',
