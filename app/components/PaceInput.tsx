@@ -9,7 +9,6 @@ export default function PaceInput({
 }) {
     const [localPace, setLocalPace] = useState(pace);
     const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
-    const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
     
     // Sync local state when prop changes from parent
     useEffect(() => {
@@ -60,23 +59,18 @@ export default function PaceInput({
         const newPace = `${minutes}:${seconds}`;
         setLocalPace(newPace);
 
-        // Clear existing timers
+        // Clear existing timer
         if (validationTimerRef.current) {
             clearTimeout(validationTimerRef.current);
         }
-        if (debounceTimerRef.current) {
-            clearTimeout(debounceTimerRef.current);
-        }
 
-        // Debounce callback to parent
-        debounceTimerRef.current = setTimeout(() => {
-            setPace(newPace);
-        }, 500);
+        // Update parent immediately so users can zero out quickly
+        setPace(newPace);
 
-        // Set new timer to validate after 500ms
+        // Delay validation to avoid fighting input while typing
         validationTimerRef.current = setTimeout(() => {
             validateAndCorrectPace(newPace);
-        }, 500);
+        }, 300);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -90,33 +84,30 @@ export default function PaceInput({
             const newPace = `${minutes}:${seconds}`;
             setLocalPace(newPace);
             
-            // Clear existing timers
-            if (debounceTimerRef.current) {
-                clearTimeout(debounceTimerRef.current);
-            }
-            
-            // Debounce callback to parent
-            debounceTimerRef.current = setTimeout(() => {
-                setPace(newPace);
-            }, 150);
+            setPace(newPace);
         }
     };
 
-    useEffect(() => {
-        if (localPace === '00:00') {
+    const handleBlur = () => {
+        const digits = localPace.replace(/\D/g, "");
+        if (digits.length === 0 || /^0+$/.test(digits)) {
             setLocalPace('');
             setPace('');
+            return;
         }
-    }, [localPace, setPace]);
+
+        if (validationTimerRef.current) {
+            clearTimeout(validationTimerRef.current);
+        }
+
+        validateAndCorrectPace(localPace);
+    };
 
     // Cleanup timers on unmount
     useEffect(() => {
         return () => {
             if (validationTimerRef.current) {
                 clearTimeout(validationTimerRef.current);
-            }
-            if (debounceTimerRef.current) {
-                clearTimeout(debounceTimerRef.current);
             }
         };
     }, []);
@@ -127,6 +118,7 @@ export default function PaceInput({
             value={localPace}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
+            onBlur={handleBlur}
             className="
         w-[3em]
         relative

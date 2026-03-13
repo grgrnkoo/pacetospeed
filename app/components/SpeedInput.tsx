@@ -43,6 +43,14 @@ export default function SpeedInput({ value, onChange }: { value: string, onChang
     }
   };
 
+  const handleBlur = () => {
+    const cleaned = value.replace(/[^\d.]/g, '');
+    const numeric = parseFloat(cleaned);
+    if (cleaned.length === 0 || isNaN(numeric) || numeric === 0) {
+      onChange('');
+    }
+  };
+
   return (
     <input
       type="text"
@@ -50,6 +58,7 @@ export default function SpeedInput({ value, onChange }: { value: string, onChang
       value={value}
       onChange={handleChange}
       onKeyDown={handleKeyDown}
+      onBlur={handleBlur}
       style={{ width: speedWidth }}
       className="
       relative

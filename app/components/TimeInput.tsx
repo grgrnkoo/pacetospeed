@@ -9,7 +9,6 @@ export default function TimeInput({
 }) {
     const [localTime, setLocalTime] = useState(time);
     const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
-    const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
     
     // Sync local state when prop changes from parent
     useEffect(() => {
@@ -73,23 +72,18 @@ export default function TimeInput({
         const newTime = `${hours}:${minutes}:${seconds}`;
         setLocalTime(newTime);
 
-        // Clear existing timers
+        // Clear existing timer
         if (validationTimerRef.current) {
             clearTimeout(validationTimerRef.current);
         }
-        if (debounceTimerRef.current) {
-            clearTimeout(debounceTimerRef.current);
-        }
 
-        // Debounce callback to parent
-        debounceTimerRef.current = setTimeout(() => {
-            setTime(newTime);
-        }, 500);
+        // Update parent immediately so users can zero out quickly
+        setTime(newTime);
 
-        // Set new timer to validate after 500ms
+        // Delay validation to avoid fighting input while typing
         validationTimerRef.current = setTimeout(() => {
             validateAndCorrectTime(newTime);
-        }, 500);
+        }, 300);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -104,33 +98,30 @@ export default function TimeInput({
             const newTime = `${hours}:${minutes}:${seconds}`;
             setLocalTime(newTime);
             
-            // Clear existing timers
-            if (debounceTimerRef.current) {
-                clearTimeout(debounceTimerRef.current);
-            }
-            
-            // Debounce callback to parent
-            debounceTimerRef.current = setTimeout(() => {
-                setTime(newTime);
-            }, 150);
+            setTime(newTime);
         }
     };
 
-    useEffect(() => {
-        if (localTime === '00:00:00') {
+    const handleBlur = () => {
+        const digits = localTime.replace(/\D/g, "");
+        if (digits.length === 0 || /^0+$/.test(digits)) {
             setLocalTime('');
             setTime('');
+            return;
         }
-    }, [localTime, setTime]);
+
+        if (validationTimerRef.current) {
+            clearTimeout(validationTimerRef.current);
+        }
+
+        validateAndCorrectTime(localTime);
+    };
 
     // Cleanup timers on unmount
     useEffect(() => {
         return () => {
             if (validationTimerRef.current) {
                 clearTimeout(validationTimerRef.current);
-            }
-            if (debounceTimerRef.current) {
-                clearTimeout(debounceTimerRef.current);
             }
         };
     }, []);
@@ -141,6 +132,7 @@ export default function TimeInput({
             value={localTime}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
+            onBlur={handleBlur}
             className="
         w-[4.5em]
         relative
@@ -162,4 +154,3 @@ export default function TimeInput({
         />
     );
 }
-
