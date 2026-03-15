@@ -138,7 +138,7 @@ export default function TimeInput({
         relative
         lg:bottom-3
         sm:bottom-1.5
-        bottom-1
+        bottom-0
         bg-transparent
         text-stone-800
         placeholder:text-stone-400
