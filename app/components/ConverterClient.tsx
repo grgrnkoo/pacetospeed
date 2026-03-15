@@ -48,7 +48,7 @@ export default function ConverterClient() {
 
   const paceToSpeed = (minutes: number, seconds: number): number => {
     const totalMinutes = minutes + seconds / 60;
-    if (totalMinutes <= 0) return 0;
+    if (totalMinutes === 0) return 0;
     return 60 / totalMinutes;
   };
 
@@ -69,27 +69,26 @@ export default function ConverterClient() {
   // Handle pace input changes (when pace is on top - editable)
   const handlePaceChange = (pace: string) => {
     setPace(pace);
-    
+
+    if (pace === '') { setSpeed(''); return; }
+
     const min = parseInt(pace.split(':')[0]) || 0;
     const sec = parseInt(pace.split(':')[1]) || 0;
 
-    if (min > 0 || sec > 0) {
-      const calculatedSpeed = paceToSpeed(min, sec);
-      const clampedSpeed = clampSpeed(calculatedSpeed);
-      setSpeed(clampedSpeed.toFixed(1));
-    } else {
-      setSpeed('');
-    }
+    const calculatedSpeed = paceToSpeed(min, sec);
+    const clampedSpeed = clampSpeed(calculatedSpeed);
+    setSpeed(clampedSpeed.toFixed(1));
   };
 
   // Handle speed input changes (when speed is on top - editable)
   const handleSpeedChange = (value: string) => {
     setSpeed(value);
 
+    if (value === '') { setPace(''); return; }
+
     const speedValue = parseFloat(value);
 
-    // Only calculate pace if we have a valid number
-    if (!isNaN(speedValue) && speedValue > 0) {
+    if (!isNaN(speedValue)) {
       const { minutes, seconds } = speedToPace(speedValue);
       setPace(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
     } else {

@@ -51,11 +51,11 @@ export default function CustomFinishTimeCalculator() {
         const seconds = parseInt(secStr) || 0;
 
         if (minutes === 0 && seconds === 0) {
-            return '';
+            return '00:00:00';
         }
 
         if (distance === 0) {
-            return '';
+            return '00:00:00';
         }
 
         const paceInMinutes = minutes + seconds / 60;
@@ -95,11 +95,11 @@ export default function CustomFinishTimeCalculator() {
         const seconds = parseInt(secStr) || 0;
 
         if (hours === 0 && minutes === 0 && seconds === 0) {
-            return '';
+            return '00:00';
         }
 
         if (distance === 0) {
-            return '';
+            return '00:00';
         }
 
         const totalMinutes = hours * 60 + minutes + seconds / 60;
@@ -135,7 +135,7 @@ export default function CustomFinishTimeCalculator() {
         const seconds = parseInt(secStr) || 0;
 
         if ((paceMinutes === 0 && paceSeconds === 0) || (hours === 0 && minutes === 0 && seconds === 0)) {
-            return '';
+            return '0.00';
         }
 
         const paceInMinutes = paceMinutes + paceSeconds / 60;
@@ -202,7 +202,9 @@ export default function CustomFinishTimeCalculator() {
     const handlePaceChange = (newPace: string) => {
         setPace(newPace);
         setLastEdited('pace');
-        
+
+        if (newPace === '') { setTime(''); return; }
+
         const distance = parseFloat(unit === 'km' ? distanceKm : distanceMiles);
         
         // If distance exists, calculate time
@@ -233,7 +235,9 @@ export default function CustomFinishTimeCalculator() {
     const handleTimeChange = (newTime: string) => {
         setTime(newTime);
         setLastEdited('time');
-        
+
+        if (newTime === '') { setPace(''); return; }
+
         const distance = parseFloat(unit === 'km' ? distanceKm : distanceMiles);
         
         // If distance exists, calculate pace

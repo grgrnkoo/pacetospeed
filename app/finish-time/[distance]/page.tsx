@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import FinishTimeCalculator from '@/app/components/FinishTimeCalculator';
 import CustomFinishTimeCalculator from '@/app/components/CustomFinishTimeCalculator';
 import LoadingFallback from '@/app/components/LoadingFallback';
+import HintOverlay from '@/app/components/HintOverlay';
 
 interface DistanceConfig {
     name: string;
@@ -133,6 +134,10 @@ function DistanceHeader({ config, defaultUnit = 'km' }: { config: DistanceConfig
             <p className="text-sm lg:text-base text-stone-800">
                 {config.name} / {defaultUnit === 'km' ? `${config.km} km` : `${config.miles.toFixed(2)} mi`}
             </p>
+            <HintOverlay>
+                <li>enter your pace in MM:SS or your target finish time in HH:MM:SS</li>
+                <li>the other value updates automatically</li>
+            </HintOverlay>
         </div>
     );
 }
@@ -172,6 +177,10 @@ export default async function DistanceFinishTimePage({ params }: PageProps) {
                         <p className="text-sm lg:text-base text-stone-800">
                             You need at least two values filled for calculations to work
                         </p>
+                        <HintOverlay>
+                            <li>converter needs any two values to work</li>
+                            <li>the third value is calculated automatically</li>
+                        </HintOverlay>
                     </div>
                     <Suspense fallback={<LoadingFallback />}>
                         <CustomFinishTimeCalculator />

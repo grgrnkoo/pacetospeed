@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { Metadata } from 'next';
 import ConverterClient from '@/app/components/ConverterClient';
 import LoadingFallback from '@/app/components/LoadingFallback';
+import HintOverlay from '@/app/components/HintOverlay';
 
 export const metadata: Metadata = {
   title: 'Running Pace to Speed Converter | Free Running Calculator for km/h & mph',
@@ -20,8 +21,12 @@ export default function Home() {
             Running Pace to Speed Converter
           </h1>
           <p className="text-sm lg:text-base text-stone-800">
-            Runner's conversion tool
+            Runner&apos;s conversion tool
           </p>
+          <HintOverlay>
+              <li>type in your pace or speed</li>
+              <li>the other value updates automatically</li>
+          </HintOverlay>
         </div>
         <Suspense fallback={<LoadingFallback />}>
           <ConverterClient />

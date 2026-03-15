@@ -50,7 +50,7 @@ export default function FinishTimeCalculator({ distanceKm, distanceMiles }: Fini
         const seconds = parseInt(secStr) || 0;
 
         if (minutes === 0 && seconds === 0) {
-            return '';
+            return '00:00:00';
         }
 
         const paceInMinutes = minutes + seconds / 60;
@@ -90,7 +90,7 @@ export default function FinishTimeCalculator({ distanceKm, distanceMiles }: Fini
         const seconds = parseInt(secStr) || 0;
 
         if (hours === 0 && minutes === 0 && seconds === 0) {
-            return '';
+            return '00:00';
         }
 
         const totalMinutes = hours * 60 + minutes + seconds / 60;
@@ -118,7 +118,9 @@ export default function FinishTimeCalculator({ distanceKm, distanceMiles }: Fini
     const handlePaceChange = (newPace: string) => {
         setPace(newPace);
         setLastEdited('pace');
-        
+
+        if (newPace === '') { setTime(''); return; }
+
         const distance = unit === 'km' ? distanceKm : distanceMiles;
         const calculatedTime = calculateFinishTime(newPace, distance);
         setTime(calculatedTime);
@@ -128,7 +130,9 @@ export default function FinishTimeCalculator({ distanceKm, distanceMiles }: Fini
     const handleTimeChange = (newTime: string) => {
         setTime(newTime);
         setLastEdited('time');
-        
+
+        if (newTime === '') { setPace(''); return; }
+
         const distance = unit === 'km' ? distanceKm : distanceMiles;
         if (!isNaN(distance) && distance > 0) {
             const calculatedPace = calculatePaceFromTime(newTime, distance);
