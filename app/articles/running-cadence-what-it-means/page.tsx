@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function RunningCadencePage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="running-cadence-what-it-means" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="running-cadence-what-it-means" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Cadence for Runners: What It Means and Why It Matters
           </h1>
@@ -37,7 +37,7 @@ export default function RunningCadencePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Cadence is your step rate, usually measured in steps per minute. It influences efficiency and
@@ -46,7 +46,7 @@ export default function RunningCadencePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Why Cadence Matters</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Why Cadence Matters</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Higher cadence reduces overstriding.</li>
               <li>It can lower impact stress on joints.</li>
@@ -55,7 +55,7 @@ export default function RunningCadencePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">How to Improve Cadence</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">How to Improve Cadence</h2>
             <ol className="list-decimal list-inside space-y-2 text-stone-800 ml-4">
               <li>Start with a 3 to 5 percent increase, not 10 percent.</li>
               <li>Use short strides at easy pace to practice.</li>
@@ -64,7 +64,7 @@ export default function RunningCadencePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
             <p className="text-stone-800 leading-relaxed">
               Good cadence is the cadence that keeps you relaxed and efficient. Improve it gradually and focus
               on smooth form.

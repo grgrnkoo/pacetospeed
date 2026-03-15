@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function TreadmillPaceVsOutdoorPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="treadmill-pace-vs-outdoor" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="treadmill-pace-vs-outdoor" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Treadmill Pace vs Outdoor Pace: Why They Feel Different
           </h1>
@@ -37,7 +37,7 @@ export default function TreadmillPaceVsOutdoorPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Many runners notice that the same pace feels easier or harder on a treadmill compared to the road.
@@ -46,7 +46,7 @@ export default function TreadmillPaceVsOutdoorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Why It Feels Different</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Why It Feels Different</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>No air resistance indoors, which can make fast paces feel easier.</li>
               <li>The belt assists leg turnover, reducing ground reaction variability.</li>
@@ -56,11 +56,11 @@ export default function TreadmillPaceVsOutdoorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Simple Adjustment</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Simple Adjustment</h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               A common rule is to add a small incline to mimic outdoor effort.
             </p>
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800">
                 Set the treadmill to <strong>1 percent incline</strong> for most steady runs. For windy outdoor
                 conditions, use 1.5 to 2 percent.
@@ -69,7 +69,7 @@ export default function TreadmillPaceVsOutdoorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">When Not to Adjust</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">When Not to Adjust</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>If you are rehabbing or returning from injury, keep effort lower.</li>
               <li>If your treadmill is uncalibrated, prioritize effort over numbers.</li>
@@ -78,7 +78,7 @@ export default function TreadmillPaceVsOutdoorPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
             <p className="text-stone-800 leading-relaxed">
               Pace parity between treadmill and outdoor runs is not always realistic. Use effort as your guide
               and adjust incline to approximate real-world resistance.

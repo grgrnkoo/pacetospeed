@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function TreadmillDistanceCalculatorPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="treadmill-distance-calculator" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="treadmill-distance-calculator" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Use a Distance Calculator for Treadmill Running Accuracy
           </h1>
@@ -39,7 +39,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Treadmill running is convenient, weather-proof, and perfectly suited for controlled training—but it 
@@ -57,7 +57,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Why Treadmill Distance Can Be Inaccurate
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -106,7 +106,7 @@ export default function TreadmillDistanceCalculatorPage() {
               </div>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mt-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mt-4">
               <p className="text-stone-800 font-semibold mb-2">⚠️ Reality Check:</p>
               <p className="text-stone-800 text-sm">
                 Studies suggest treadmill distance can be off by 5-10% on average, with poorly maintained or 
@@ -116,7 +116,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Basic Distance Calculation Formula
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -128,7 +128,7 @@ export default function TreadmillDistanceCalculatorPage() {
               <li>How long you ran (in hours or minutes)</li>
             </ul>
 
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">Basic Distance Formula</p>
               <div className="space-y-2 text-center">
                 <p className="text-xl"><strong>Distance = Speed × Time</strong></p>
@@ -136,7 +136,7 @@ export default function TreadmillDistanceCalculatorPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Step-by-Step Example:</p>
               
               <div className="mb-4">
@@ -160,14 +160,14 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Alternative Formula: Using Pace Instead of Speed
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you prefer thinking in terms of pace (min/km or min/mile) rather than speed, you can use this approach:
             </p>
 
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">Pace-Based Distance Formula</p>
               <div className="space-y-2 text-center">
                 <p className="text-xl"><strong>Distance = Running Time ÷ Pace</strong></p>
@@ -175,7 +175,7 @@ export default function TreadmillDistanceCalculatorPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Step-by-Step Examples:</p>
               
               <div className="mb-4">
@@ -201,14 +201,14 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               How to Verify Your Treadmill's Accuracy
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Want to know if your treadmill displays accurate distance? Here's a simple test:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Accuracy Test Process:</p>
               <ol className="list-decimal list-inside space-y-3 text-stone-800 ml-4">
                 <li>
@@ -234,7 +234,7 @@ export default function TreadmillDistanceCalculatorPage() {
               </ol>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mt-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mt-4">
               <p className="text-stone-800 font-semibold mb-2">💡 Pro Tip:</p>
               <p className="text-stone-800 text-sm">
                 Run this test at multiple speeds (slow, moderate, fast) to see if the error is consistent or 
@@ -244,7 +244,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Practical Scenarios: When to Use a Distance Calculator
             </h2>
 
@@ -299,7 +299,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Quick Reference Table: Common Treadmill Speeds & Distances
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -366,7 +366,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Tips for More Accurate Treadmill Training
             </h2>
 
@@ -434,7 +434,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Common Mistakes When Calculating Treadmill Distance
             </h2>
 
@@ -471,7 +471,7 @@ export default function TreadmillDistanceCalculatorPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Calculate Treadmill Distance Instantly
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

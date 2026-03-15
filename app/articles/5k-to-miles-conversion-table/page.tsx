@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function FiveKToMilesConversionPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="5k-to-miles-conversion-table" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="5k-to-miles-conversion-table" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             5K to Miles Conversion Table (Pace, Time, Distance)
           </h1>
@@ -39,7 +39,7 @@ export default function FiveKToMilesConversionPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               The 5K is one of the most popular race distances worldwide, but the mix of metric (5 kilometers) 
@@ -57,11 +57,11 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               5K Distance: The Exact Conversion
             </h2>
             
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">5K Distance Conversion</p>
               <div className="space-y-2 text-center">
                 <p className="text-2xl font-bold">5 kilometers = 3.10686 miles</p>
@@ -69,7 +69,7 @@ export default function FiveKToMilesConversionPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Also Equals:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>5,000 meters</strong></li>
@@ -80,7 +80,7 @@ export default function FiveKToMilesConversionPage() {
               </ul>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mt-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mt-4">
               <p className="text-stone-800 font-semibold mb-2">💡 Why 3.1 Miles?</p>
               <p className="text-stone-800 text-sm">
                 The 5K distance became popular because it's exactly 5 kilometers—a round number in the metric 
@@ -90,7 +90,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               5K Pace Conversion Chart
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -174,7 +174,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               5K Finish Time Table by Pace
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -264,7 +264,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               5K Split Times by Goal Finish Time
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -344,7 +344,7 @@ export default function FiveKToMilesConversionPage() {
               </table>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500">
               <p className="text-stone-800 font-semibold mb-2">💡 Pacing Strategy Tip:</p>
               <p className="text-stone-800 text-sm">
                 For best results, aim to run even or negative splits (second half slightly faster than first half). 
@@ -354,7 +354,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               5K Mile Split Times
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -421,7 +421,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Common 5K Time Goals and What They Mean
             </h2>
 
@@ -489,7 +489,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               How to Use These Tables for Training
             </h2>
 
@@ -557,14 +557,14 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Converting Other Distances to 5K Pace
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you know your pace at other distances, here's how it typically relates to 5K pace:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Pace Relationship Guidelines:</p>
               <ul className="space-y-2 text-stone-800 text-sm">
                 <li>• <strong>1 Mile pace:</strong> Typically 15-20 seconds faster per km than 5K pace</li>
@@ -581,7 +581,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Quick Mental Math for 5K Conversions
             </h2>
 
@@ -628,7 +628,7 @@ export default function FiveKToMilesConversionPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Calculate Your Perfect 5K Race Strategy
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

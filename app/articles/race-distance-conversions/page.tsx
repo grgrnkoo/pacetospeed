@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function RaceDistanceConversionsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="race-distance-conversions" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="race-distance-conversions" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How Many Miles Is a 5K / 10K / Half Marathon / Marathon?
           </h1>
@@ -39,7 +39,7 @@ export default function RaceDistanceConversionsPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Whether you're signing up for your first race or comparing your performance across different events, 
@@ -56,11 +56,11 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Quick Answer: Common Race Distances
             </h2>
             
-            <div className="bg-stone-800 text-white rounded-lg p-6">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6">
               <div className="space-y-3">
                 <div className="flex justify-between items-center border-b border-stone-600 pb-3">
                   <span className="font-semibold">5K</span>
@@ -83,7 +83,7 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               5K = 3.1 Miles
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -91,7 +91,7 @@ export default function RaceDistanceConversionsPage() {
               and seasoned runners alike.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-2">Exact Distance:</p>
               <ul className="space-y-1 text-stone-800 ml-4">
                 <li>• <strong>5 kilometers = 3.10686 miles</strong></li>
@@ -127,14 +127,14 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               10K = 6.2 Miles
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               The 10K doubles the 5K distance and represents a significant step up in both endurance and challenge.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-2">Exact Distance:</p>
               <ul className="space-y-1 text-stone-800 ml-4">
                 <li>• <strong>10 kilometers = 6.21371 miles</strong></li>
@@ -170,7 +170,7 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Half Marathon = 13.1 Miles
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -178,7 +178,7 @@ export default function RaceDistanceConversionsPage() {
               the extreme training demands of 26.2 miles.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-2">Exact Distance:</p>
               <ul className="space-y-1 text-stone-800 ml-4">
                 <li>• <strong>21.0975 kilometers = 13.1094 miles</strong></li>
@@ -215,7 +215,7 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Marathon = 26.2 Miles
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -223,7 +223,7 @@ export default function RaceDistanceConversionsPage() {
               requires months of preparation.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-2">Exact Distance:</p>
               <ul className="space-y-1 text-stone-800 ml-4">
                 <li>• <strong>42.195 kilometers = 26.2188 miles</strong></li>
@@ -231,7 +231,7 @@ export default function RaceDistanceConversionsPage() {
               </ul>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mb-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mb-4">
               <p className="text-stone-800 font-semibold mb-2">📖 Historical Note:</p>
               <p className="text-stone-800 text-sm">
                 The marathon distance was standardized at 42.195 km (26.2 miles) at the 1908 London Olympics. 
@@ -267,7 +267,7 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Other Common Race Distances
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -355,7 +355,7 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Complete Distance Conversion Table
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -443,7 +443,7 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Using Distance Knowledge for Race Planning
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -494,14 +494,14 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Conversion Formula
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you need to convert other distances between kilometers and miles, here's the formula:
             </p>
 
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <div className="space-y-3">
                 <div className="text-center pb-3 border-b border-stone-600">
                   <p className="text-lg font-semibold mb-2">Kilometers to Miles</p>
@@ -524,7 +524,7 @@ export default function RaceDistanceConversionsPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Plan Your Race with Our Tools
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

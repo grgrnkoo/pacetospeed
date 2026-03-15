@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function PaceCalculatorMinMileToMinKmPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="pace-calculator-min-mile-to-min-km" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="pace-calculator-min-mile-to-min-km" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Pace Calculator: Convert Minutes per Mile to Minutes per Kilometer
           </h1>
@@ -37,7 +37,7 @@ export default function PaceCalculatorMinMileToMinKmPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Runners often switch between miles and kilometers depending on race location, watch settings, or
@@ -51,8 +51,8 @@ export default function PaceCalculatorMinMileToMinKmPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">The Core Formula</h2>
-            <div className="bg-stone-800 text-white rounded-lg p-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">The Core Formula</h2>
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6">
               <p className="text-lg font-semibold mb-4 text-center">Minutes per Mile to Minutes per Kilometer</p>
               <p className="text-center text-xl"><strong>min/km = min/mile ÷ 1.60934</strong></p>
             </div>
@@ -63,8 +63,8 @@ export default function PaceCalculatorMinMileToMinKmPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Step-by-Step Example</h2>
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Step-by-Step Example</h2>
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Example: 8:00 min/mile</p>
               <ol className="list-decimal list-inside space-y-2 text-stone-800 ml-4 text-sm">
                 <li>Convert 8:00 to minutes = 8.00</li>
@@ -76,7 +76,7 @@ export default function PaceCalculatorMinMileToMinKmPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Quick Conversion Table</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Quick Conversion Table</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -116,17 +116,17 @@ export default function PaceCalculatorMinMileToMinKmPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Reverse Conversion</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Reverse Conversion</h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you need to go from min/km to min/mile, multiply by 1.60934:
             </p>
-            <div className="bg-stone-800 text-white rounded-lg p-6">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6">
               <p className="text-center text-xl"><strong>min/mile = min/km × 1.60934</strong></p>
             </div>
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Summary</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Summary</h2>
             <p className="text-stone-800 leading-relaxed">
               Converting min/mile to min/km is straightforward once you know the formula. Use the conversion
               table for quick lookups, or plug your pace into the formula for precise results. If you are

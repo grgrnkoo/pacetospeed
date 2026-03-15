@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function VO2MaxForRunnersPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="vo2-max-for-runners" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="vo2-max-for-runners" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             VO2 Max for Runners: What It Is and How to Improve It
           </h1>
@@ -37,7 +37,7 @@ export default function VO2MaxForRunnersPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               VO2 max is the maximum amount of oxygen your body can use during intense exercise. It is a strong
@@ -46,7 +46,7 @@ export default function VO2MaxForRunnersPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Why It Matters</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Why It Matters</h2>
             <p className="text-stone-800 leading-relaxed">
               Higher VO2 max generally means you can sustain faster speeds for longer. It influences race pace,
               recovery between efforts, and overall fitness.
@@ -54,7 +54,7 @@ export default function VO2MaxForRunnersPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">How to Improve VO2 Max</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">How to Improve VO2 Max</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Short intervals at 3K to 5K pace</li>
               <li>Steady weekly mileage with easy runs</li>
@@ -63,7 +63,7 @@ export default function VO2MaxForRunnersPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
             <p className="text-stone-800 leading-relaxed">
               VO2 max improves with consistent training, not one-off workouts. Keep sessions controlled and
               build over time.

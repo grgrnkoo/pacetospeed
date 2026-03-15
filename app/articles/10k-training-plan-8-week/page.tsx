@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function TenKTrainingPlanPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="10k-training-plan-8-week" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="10k-training-plan-8-week" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             10K Training Plan: 8-Week Schedule for First-Timers
           </h1>
@@ -37,7 +37,7 @@ export default function TenKTrainingPlanPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               This plan is designed for runners who can run 5K comfortably and want to step up to a 10K in
@@ -46,7 +46,7 @@ export default function TenKTrainingPlanPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Weekly Structure</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Weekly Structure</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>3 to 4 runs per week</li>
               <li>1 quality workout (tempo or intervals)</li>
@@ -56,7 +56,7 @@ export default function TenKTrainingPlanPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">8-Week Plan Overview</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">8-Week Plan Overview</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -113,7 +113,7 @@ export default function TenKTrainingPlanPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Race Week Tips</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Race Week Tips</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Reduce volume by 30 to 40 percent.</li>
               <li>Keep one short tempo session to stay sharp.</li>

@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function WalkingDistanceCaloriesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="walking-distance-calories" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="walking-distance-calories" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Convert Walking Distance to Calories: How Far Should You Walk Per Day?
           </h1>
@@ -39,7 +39,7 @@ export default function WalkingDistanceCaloriesPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Walking is one of the most accessible forms of exercise—no equipment needed, low impact, and 
@@ -57,11 +57,11 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Quick Answer: Calories Burned Walking
             </h2>
             
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">General Estimate</p>
               <div className="space-y-3 text-center">
                 <p className="text-xl">
@@ -76,7 +76,7 @@ export default function WalkingDistanceCaloriesPage() {
               </div>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500">
               <p className="text-stone-800 font-semibold mb-2">⚠️ Important Note:</p>
               <p className="text-stone-800 text-sm">
                 Actual calories burned depend on multiple factors including body weight, walking speed, terrain, 
@@ -86,14 +86,14 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Formula: Calculate Calories Burned Walking
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               For a more accurate calculation, use this widely-accepted formula:
             </p>
 
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">Calorie Burn Formula</p>
               <div className="text-center">
                 <p className="text-lg mb-2">
@@ -106,7 +106,7 @@ export default function WalkingDistanceCaloriesPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Example Calculations:</p>
               
               <div className="mb-4">
@@ -142,7 +142,7 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Factors That Affect Calories Burned
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -210,7 +210,7 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               How Far Should You Walk Per Day?
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -279,7 +279,7 @@ export default function WalkingDistanceCaloriesPage() {
               </div>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mt-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mt-4">
               <p className="text-stone-800 font-semibold mb-2">💡 Pro Tip:</p>
               <p className="text-stone-800 text-sm">
                 Start where you are and gradually increase. If you're currently sedentary, beginning with 
@@ -289,14 +289,14 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Converting Steps to Distance and Calories
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Many people track steps rather than distance. Here's how they relate:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">General Conversion:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>2,000 steps ≈ 1.6 km ≈ 1 mile</strong></li>
@@ -361,14 +361,14 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Walking for Weight Loss: The Math
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               To lose weight, you need to create a calorie deficit. Here's how walking fits into the equation:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">Weight Loss Math:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>1 kg (2.2 lbs) of fat ≈ 7,700 calories</strong></li>
@@ -377,7 +377,7 @@ export default function WalkingDistanceCaloriesPage() {
               </ul>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6">
               <p className="text-stone-800 font-semibold mb-3">Example Scenario:</p>
               <p className="text-stone-800 mb-3">
                 Goal: Lose 0.5 kg per week through walking alone
@@ -393,7 +393,7 @@ export default function WalkingDistanceCaloriesPage() {
               </p>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mt-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mt-4">
               <p className="text-stone-800 font-semibold mb-2">⚠️ Important:</p>
               <p className="text-stone-800 text-sm">
                 Walking alone can support weight loss, but combining it with dietary changes is most effective. 
@@ -403,7 +403,7 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Practical Tips for Reaching Your Daily Walking Goals
             </h2>
 
@@ -481,7 +481,7 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Walking vs Running: Calorie Comparison
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -540,7 +540,7 @@ export default function WalkingDistanceCaloriesPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Track Your Walking Goals with Precision
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function UnderstandingRunningPacePage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="understanding-running-pace" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="understanding-running-pace" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-4xl font-bold text-stone-800 mb-4">
             Understanding Running Pace
           </h1>
@@ -41,9 +41,9 @@ export default function UnderstandingRunningPacePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-6">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-6">
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               What is Running Pace?
             </h2>
             <p className="text-stone-800 leading-relaxed">
@@ -54,7 +54,7 @@ export default function UnderstandingRunningPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Pace vs Speed
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -70,7 +70,7 @@ export default function UnderstandingRunningPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Why Pace Matters
             </h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800">
@@ -82,7 +82,7 @@ export default function UnderstandingRunningPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Common Training Paces
             </h2>
             <div className="space-y-3">
@@ -114,7 +114,7 @@ export default function UnderstandingRunningPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Using the Pace-Speed Converter
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

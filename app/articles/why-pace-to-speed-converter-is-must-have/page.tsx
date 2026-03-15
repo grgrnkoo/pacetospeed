@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function WhyPaceToSpeedConverterPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="why-pace-to-speed-converter-is-must-have" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="why-pace-to-speed-converter-is-must-have" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Why a Pace-to-Speed Converter Is a Must-Have Tool for Runners
           </h1>
@@ -41,7 +41,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Whether you're training for your first 10K or chasing a marathon PR, understanding the relationship 
@@ -59,7 +59,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               1. Perfect for Treadmill Training
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -95,7 +95,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               2. Helps Compare Effort Across Different Training Zones
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -119,7 +119,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               3. Useful for Races With Different Measurement Systems
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -139,7 +139,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               4. Makes Data From Running Apps Easier to Understand
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -162,7 +162,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               5. Saves Time Compared to Manual Calculations
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -183,7 +183,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               6. Great for Beginners AND Advanced Runners
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -220,7 +220,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               7. Helpful for Coaches and Fitness Instructors
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -233,7 +233,7 @@ export default function WhyPaceToSpeedConverterPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Conclusion: A Small Tool That Makes a Big Difference
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

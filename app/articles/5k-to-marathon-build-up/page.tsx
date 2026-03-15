@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function BuildUpFrom5KToMarathonPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="5k-to-marathon-build-up" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="5k-to-marathon-build-up" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             5K to Marathon: How to Build Up Safely (Mileage Progression Guide)
           </h1>
@@ -37,7 +37,7 @@ export default function BuildUpFrom5KToMarathonPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               The jump from 5K fitness to marathon readiness is mostly about gradual mileage. A slow progression
@@ -46,8 +46,8 @@ export default function BuildUpFrom5KToMarathonPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Simple Progression Rule</h2>
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Simple Progression Rule</h2>
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800">
                 Increase weekly mileage by <strong>5 to 10 percent</strong> every 2 to 3 weeks, then take a lighter
                 week to absorb training.
@@ -56,7 +56,7 @@ export default function BuildUpFrom5KToMarathonPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Example Progression</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Example Progression</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Weeks 1-4: 15 to 22 km per week</li>
               <li>Weeks 5-8: 22 to 30 km per week</li>
@@ -66,7 +66,7 @@ export default function BuildUpFrom5KToMarathonPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
             <p className="text-stone-800 leading-relaxed">
               Consistency beats speed of progression. Focus on time on feet and recovery, and add intensity only
               after the base is stable.

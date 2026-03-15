@@ -23,40 +23,36 @@ export const metadata: Metadata = {
 
 export default function ArticlesPage() {
   return (
-    <div className="min-h-screen">
-      {/* Main Content */}
-      <main className="max-w-4xl mx-auto py-12 px-4">
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+    <div className="w-full">
+      <main className="max-w-4xl mx-auto py-8 sm:py-12 px-4">
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-800 mb-1 sm:mb-2">
             Articles
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-sm sm:text-base text-stone-500">
             Tips, guides, and insights for runners
           </p>
         </div>
 
-        {/* Articles List */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {articles.map((article) => (
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all p-6 hover:scale-[1.02] hover:cursor-pointer"
+              className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all p-4 sm:p-6 hover:scale-[1.02] hover:cursor-pointer"
             >
               <article>
-                <div className="flex justify-between items-start mb-2">
-                  <h2 className="text-2xl font-semibold text-gray-900">
-                    {article.title}
-                  </h2>
-                  <time className="text-sm text-gray-500 whitespace-nowrap ml-4">
-                    {new Date(article.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </time>
-                </div>
-                <p className="text-gray-600">
+                <time className="text-xs sm:text-sm text-stone-400 mb-1 block">
+                  {new Date(article.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </time>
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-stone-800 mb-1">
+                  {article.title}
+                </h2>
+                <p className="text-sm sm:text-base text-stone-500">
                   {article.description}
                 </p>
               </article>

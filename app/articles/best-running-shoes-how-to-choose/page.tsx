@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function BestRunningShoesHowToChoosePage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="best-running-shoes-how-to-choose" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="best-running-shoes-how-to-choose" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Best Running Shoes: How to Choose the Right Pair
           </h1>
@@ -37,7 +37,7 @@ export default function BestRunningShoesHowToChoosePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               The best running shoe is the one that fits your foot, your mileage, and your training style.
@@ -46,7 +46,7 @@ export default function BestRunningShoesHowToChoosePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Fit Checklist</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Fit Checklist</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Thumb-width space in front of your toes.</li>
               <li>No pressure points around the midfoot.</li>
@@ -55,7 +55,7 @@ export default function BestRunningShoesHowToChoosePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Match Shoes to Training</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Match Shoes to Training</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Daily trainer for most easy miles.</li>
               <li>Lightweight shoe for speed or race day.</li>
@@ -64,7 +64,7 @@ export default function BestRunningShoesHowToChoosePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
             <p className="text-stone-800 leading-relaxed">
               Comfort is the best predictor of a good shoe. Get the fit right, then choose a model that matches
               your training volume and surfaces.

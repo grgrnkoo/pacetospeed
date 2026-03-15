@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function WhyRunningAppsDontConvertPacePage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="why-running-apps-dont-convert-pace" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="why-running-apps-dont-convert-pace" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Why Most Running Apps Don't Let You Convert Pace to Speed
           </h1>
@@ -39,7 +39,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you're a runner who trains both outdoors and on treadmills, you've probably encountered this 
@@ -58,7 +58,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Missing Feature: A Common Problem
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -108,7 +108,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
               </div>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mt-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mt-4">
               <p className="text-stone-800 font-semibold mb-2">⚠️ The Common Gap:</p>
               <p className="text-stone-800 text-sm">
                 All of these apps are excellent at what they're designed for—tracking and analyzing runs. But 
@@ -119,14 +119,14 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Reason 1: Apps Focus on Tracking, Not Planning
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Most running apps are fundamentally designed as activity trackers, not workout planning tools.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">The Core Business Model:</p>
               <ul className="space-y-2 text-stone-800 text-sm">
                 <li>
@@ -152,7 +152,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Reason 2: Design Philosophy: "You're Already Running"
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -194,14 +194,14 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Reason 3: Treadmill Running Isn't the Priority
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Running apps are built around GPS tracking, which means outdoor running is the default experience.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">The GPS-First Paradigm:</p>
               <ul className="space-y-2 text-stone-800 text-sm">
                 <li>
@@ -221,7 +221,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
               outdoor tracking, treadmill-specific utilities like converters don't get developed.
             </p>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500">
               <p className="text-stone-800 font-semibold mb-2">💡 The Reality:</p>
               <p className="text-stone-800 text-sm">
                 Many runners train indoors during bad weather, early mornings, or winter months. Despite this, 
@@ -231,7 +231,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Reason 4: Feature Bloat vs. Simplicity
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -268,14 +268,14 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Reason 5: Assumption That Runners Use External Resources
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Running apps may simply assume users will find conversion tools elsewhere when needed.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">The Ecosystem Approach:</p>
               <p className="text-stone-800 mb-3">
                 Rather than building every possible utility, apps focus on their core competencies and assume 
@@ -296,7 +296,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               What Runners Actually Need
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -358,7 +358,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Workarounds Runners Currently Use
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -401,7 +401,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Could Running Apps Add This Feature?
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -409,7 +409,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
               resources. So why don't they?
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">The Product Priorities:</p>
               <ol className="list-decimal list-inside space-y-2 text-stone-800 text-sm ml-4">
                 <li>
@@ -440,7 +440,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Case for Dedicated Conversion Tools
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -502,7 +502,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Future: Will Apps Add Conversion Tools?
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -510,7 +510,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
               factors suggest it won't be a priority:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <ul className="space-y-3 text-stone-800">
                 <li>
                   <strong>Business model alignment:</strong> Conversion tools don't drive subscriptions or user 
@@ -533,7 +533,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Solution: A Dedicated Converter
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

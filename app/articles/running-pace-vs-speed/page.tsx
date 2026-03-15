@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function RunningPaceVsSpeedPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="running-pace-vs-speed" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="running-pace-vs-speed" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Running Pace vs Speed: What's the Difference and How to Convert Them
           </h1>
@@ -39,7 +39,7 @@ export default function RunningPaceVsSpeedPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you've ever felt confused by running metrics—wondering whether to track your workout in minutes per 
@@ -55,7 +55,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               What is Running Pace?
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -63,7 +63,7 @@ export default function RunningPaceVsSpeedPage() {
               "How many minutes does it take me to run one kilometer (or mile)?"
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">Common Pace Units:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>Minutes per kilometer (min/km)</strong> – Used primarily in metric countries</li>
@@ -71,7 +71,7 @@ export default function RunningPaceVsSpeedPage() {
               </ul>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6">
               <p className="text-stone-800 font-semibold mb-2">Examples:</p>
               <ul className="space-y-1 text-stone-800 ml-4">
                 <li>• A pace of 5:00 min/km means you run 1 kilometer in 5 minutes</li>
@@ -82,7 +82,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               What is Running Speed?
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -90,7 +90,7 @@ export default function RunningPaceVsSpeedPage() {
               "How many kilometers (or miles) do I run in one hour?"
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">Common Speed Units:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>Kilometers per hour (km/h)</strong> – Standard metric measurement</li>
@@ -98,7 +98,7 @@ export default function RunningPaceVsSpeedPage() {
               </ul>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6">
               <p className="text-stone-800 font-semibold mb-2">Examples:</p>
               <ul className="space-y-1 text-stone-800 ml-4">
                 <li>• A speed of 12 km/h means you cover 12 kilometers in one hour</li>
@@ -109,7 +109,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Key Difference: Inverse Relationship
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -128,7 +128,7 @@ export default function RunningPaceVsSpeedPage() {
               This can feel counterintuitive at first, but think of it this way:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6">
               <p className="text-stone-800 mb-4">
                 If you're running <strong>faster</strong>, you need <strong>less time</strong> to cover each kilometer 
                 (lower pace numbers), but you cover <strong>more distance</strong> per hour (higher speed numbers).
@@ -140,7 +140,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Why Do Runners Use Both Metrics?
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -179,14 +179,14 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               How to Convert Pace to Speed
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Converting from pace (min/km or min/mile) to speed (km/h or mph) uses a simple division formula:
             </p>
 
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">Pace → Speed Conversion</p>
               <div className="space-y-2">
                 <p className="text-center"><strong>Speed (km/h) = 60 ÷ Pace (min/km)</strong></p>
@@ -194,7 +194,7 @@ export default function RunningPaceVsSpeedPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Step-by-Step Examples:</p>
               
               <div className="mb-4">
@@ -227,14 +227,14 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               How to Convert Speed to Pace
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Converting from speed (km/h or mph) to pace (min/km or min/mile) uses the same formula in reverse:
             </p>
 
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">Speed → Pace Conversion</p>
               <div className="space-y-2">
                 <p className="text-center"><strong>Pace (min/km) = 60 ÷ Speed (km/h)</strong></p>
@@ -242,7 +242,7 @@ export default function RunningPaceVsSpeedPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Step-by-Step Examples:</p>
               
               <div className="mb-4">
@@ -276,7 +276,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Quick Conversion Reference Table
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -342,7 +342,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Converting Between Decimal and Time Format
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -350,7 +350,7 @@ export default function RunningPaceVsSpeedPage() {
               minutes:seconds format.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Conversion Process:</p>
               <ol className="list-decimal list-inside space-y-2 text-stone-800 mb-4">
                 <li>The whole number = minutes</li>
@@ -370,14 +370,14 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Real-World Scenario: Treadmill Training
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Let's look at a common situation where pace-speed conversion is essential:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6">
               <p className="text-stone-800 font-semibold mb-3">Scenario:</p>
               <p className="text-stone-800 mb-4">
                 Your training plan calls for 30 minutes at 5:30 min/km pace, but you're running on a treadmill 
@@ -399,7 +399,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Common Conversion Mistakes to Avoid
             </h2>
 
@@ -432,7 +432,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Tips for Mastering Both Metrics
             </h2>
 
@@ -480,7 +480,7 @@ export default function RunningPaceVsSpeedPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Skip the Math: Use Our Instant Converter
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

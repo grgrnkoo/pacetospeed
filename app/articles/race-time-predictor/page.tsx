@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function RaceTimePredictorPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="race-time-predictor" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="race-time-predictor" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Race Time Predictor: Estimate Your Finish Time (5K to Marathon)
           </h1>
@@ -37,7 +37,7 @@ export default function RaceTimePredictorPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you know your target pace, you can predict your finish time for any distance. This is useful
@@ -46,16 +46,16 @@ export default function RaceTimePredictorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Finish Time Formula</h2>
-            <div className="bg-stone-800 text-white rounded-lg p-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Finish Time Formula</h2>
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6">
               <p className="text-lg font-semibold mb-4 text-center">Finish Time = Pace × Distance</p>
               <p className="text-center text-sm opacity-90">Use minutes and kilometers for min/km, or minutes and miles for min/mile.</p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Example: 5:00 min/km</h2>
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Example: 5:00 min/km</h2>
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <ul className="space-y-2 text-stone-800">
                 <li>5K: 25:00</li>
                 <li>10K: 50:00</li>
@@ -66,7 +66,7 @@ export default function RaceTimePredictorPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Quick Table (min/km)</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Quick Table (min/km)</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -113,7 +113,7 @@ export default function RaceTimePredictorPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Use With Caution</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Use With Caution</h2>
             <p className="text-stone-800 leading-relaxed">
               The formula assumes you can hold the same pace for all distances, which is rarely true. Expect
               longer races to require slower paces. Use this as a starting estimate, then adjust with your

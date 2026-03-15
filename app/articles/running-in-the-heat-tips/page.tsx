@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function RunningInTheHeatTipsPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="running-in-the-heat-tips" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="running-in-the-heat-tips" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Running in the Heat: Safety Tips and Pace Adjustments
           </h1>
@@ -37,7 +37,7 @@ export default function RunningInTheHeatTipsPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Heat raises heart rate and perceived effort. Running safely in hot weather means adjusting pace,
@@ -46,7 +46,7 @@ export default function RunningInTheHeatTipsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Practical Tips</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Practical Tips</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Slow your pace by 10 to 30 seconds per km depending on heat.</li>
               <li>Run early morning or after sunset.</li>
@@ -56,7 +56,7 @@ export default function RunningInTheHeatTipsPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
             <p className="text-stone-800 leading-relaxed">
               Heat makes every pace feel harder. Adjust effort, stay hydrated, and choose safe conditions to
               keep training consistent.

@@ -23,9 +23,9 @@ export const metadata: Metadata = {
 
 export default function RunWalkMethodGuidePage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="run-walk-method-guide" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="run-walk-method-guide" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Run-Walk Method: A Simple Guide for New Runners
           </h1>
@@ -34,7 +34,7 @@ export default function RunWalkMethodGuidePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               The run-walk method alternates short running segments with walking breaks. It reduces impact,
@@ -43,8 +43,8 @@ export default function RunWalkMethodGuidePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">A Simple Starter Plan</h2>
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">A Simple Starter Plan</h2>
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <ul className="space-y-2 text-stone-800">
                 <li>Week 1: 1 min run / 2 min walk x 8</li>
                 <li>Week 2: 2 min run / 2 min walk x 7</li>
@@ -55,7 +55,7 @@ export default function RunWalkMethodGuidePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
             <p className="text-stone-800 leading-relaxed">
               Run-walk is not a shortcut. It is a smart progression tool. Use it until you can run continuously,
               then gradually reduce the walk breaks.

@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function RunningPaceChartByAgePage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="running-pace-chart-by-age" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="running-pace-chart-by-age" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Running Pace Chart by Age and Ability (Beginner to Advanced)
           </h1>
@@ -37,7 +37,7 @@ export default function RunningPaceChartByAgePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Pace benchmarks help you set realistic targets and track progress. This chart is a practical
@@ -51,7 +51,7 @@ export default function RunningPaceChartByAgePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Pace Chart (min/km)</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Pace Chart (min/km)</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -102,7 +102,7 @@ export default function RunningPaceChartByAgePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">How to Use This Chart</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">How to Use This Chart</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Use the beginner range for easy runs and base building.</li>
               <li>Use the intermediate range for tempo and steady-state workouts.</li>
@@ -114,7 +114,7 @@ export default function RunningPaceChartByAgePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
             <p className="text-stone-800 leading-relaxed">
               A pace chart is a guide to help you set realistic expectations. Consistency and gradual progress
               matter more than any single benchmark. Use these ranges to plan and track, then adjust based on

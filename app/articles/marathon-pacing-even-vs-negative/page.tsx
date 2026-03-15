@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function MarathonPacingEvenVsNegativePage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="marathon-pacing-even-vs-negative" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="marathon-pacing-even-vs-negative" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Marathon Pacing Strategy: Even Splits vs Negative Splits
           </h1>
@@ -37,7 +37,7 @@ export default function MarathonPacingEvenVsNegativePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Marathon pacing is more about discipline than speed. The two most common strategies are even
@@ -46,7 +46,7 @@ export default function MarathonPacingEvenVsNegativePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Even Splits</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Even Splits</h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Even splits mean you run each segment at the same pace from start to finish.
             </p>
@@ -57,7 +57,7 @@ export default function MarathonPacingEvenVsNegativePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Negative Splits</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Negative Splits</h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Negative splits mean you run the second half faster than the first.
             </p>
@@ -68,7 +68,7 @@ export default function MarathonPacingEvenVsNegativePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Which Should You Choose?</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Which Should You Choose?</h2>
             <p className="text-stone-800 leading-relaxed">
               Most runners benefit from slight negative splits. Start controlled, then increase effort after
               halfway if you feel strong. If you are new to the marathon, aim for even splits with a conservative

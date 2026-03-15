@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function TreadmillInclinePaceConversionPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="treadmill-incline-pace-conversion" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="treadmill-incline-pace-conversion" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Treadmill Incline Pace Conversion: How to Adjust for Hills
           </h1>
@@ -37,7 +37,7 @@ export default function TreadmillInclinePaceConversionPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Outdoor runs rarely stay flat. If you train indoors, adding incline can make treadmill effort
@@ -46,8 +46,8 @@ export default function TreadmillInclinePaceConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Simple Rule of Thumb</h2>
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Simple Rule of Thumb</h2>
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800">
                 Use <strong>1 percent incline</strong> for steady runs. Increase to 2 to 4 percent for hill
                 workouts or when simulating rolling terrain.
@@ -56,7 +56,7 @@ export default function TreadmillInclinePaceConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Quick Reference Table</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Quick Reference Table</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -93,7 +93,7 @@ export default function TreadmillInclinePaceConversionPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Key Takeaway</h2>
             <p className="text-stone-800 leading-relaxed">
               The incline setting is a tool to match effort, not a precise conversion. Use it consistently and
               track how it feels. Your perceived effort is the best guide.

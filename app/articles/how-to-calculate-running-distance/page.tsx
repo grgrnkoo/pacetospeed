@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function HowToCalculateRunningDistancePage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-calculate-running-distance" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="how-to-calculate-running-distance" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Calculate Running Distance Based on Time and Pace (Simple Guide)
           </h1>
@@ -39,7 +39,7 @@ export default function HowToCalculateRunningDistancePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Whether you're planning a training session, tracking your progress, or just curious about how far you've run, 
@@ -55,14 +55,14 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Basic Formula
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               At its core, calculating distance from time and pace is straightforward:
             </p>
             
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4 text-center">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4 text-center">
               <p className="text-xl font-semibold mb-2">Distance = Time ÷ Pace</p>
               <p className="text-sm opacity-90">
                 (When pace is in minutes per distance unit)
@@ -78,14 +78,14 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Method 1: Using Minutes per Kilometer (min/km)
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               If your pace is measured in minutes per kilometer, the formula becomes:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">Formula:</p>
               <p className="text-stone-800 mb-4">
                 <strong>Distance (km) = Running Time (minutes) ÷ Pace (min/km)</strong>
@@ -106,7 +106,7 @@ export default function HowToCalculateRunningDistancePage() {
               </ul>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500">
               <p className="text-stone-800 font-semibold mb-2">💡 Quick Tip:</p>
               <p className="text-stone-800 text-sm">
                 When your pace includes seconds (like 6:30), convert it to decimal minutes first. 
@@ -116,14 +116,14 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Method 2: Using Minutes per Mile (min/mi)
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               The exact same principle applies when working in miles:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">Formula:</p>
               <p className="text-stone-800 mb-4">
                 <strong>Distance (miles) = Running Time (minutes) ÷ Pace (min/mile)</strong>
@@ -146,7 +146,7 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Step-by-Step: Converting Time to Decimal Minutes
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -154,7 +154,7 @@ export default function HowToCalculateRunningDistancePage() {
               this to decimal format before calculating.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-stone-800 font-semibold mb-3">Conversion Process:</p>
               <ol className="list-decimal list-inside space-y-3 text-stone-800">
                 <li>Take the seconds portion</li>
@@ -177,7 +177,7 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Real-World Example: Planning a 10K Training Run
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -185,7 +185,7 @@ export default function HowToCalculateRunningDistancePage() {
               of 5:30 min/km. How far will you run?
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6">
               <p className="text-stone-800 font-semibold mb-3">Solution:</p>
               <ol className="list-decimal list-inside space-y-2 text-stone-800 mb-4">
                 <li>Convert pace to decimal: 5:30 = 5.5 minutes</li>
@@ -200,21 +200,21 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Using Speed Instead of Pace
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               If you prefer working with speed (km/h or mph) rather than pace, the calculation is even simpler:
             </p>
 
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4 text-center">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4 text-center">
               <p className="text-xl font-semibold mb-2">Distance = Speed × Time</p>
               <p className="text-sm opacity-90">
                 (When time is in hours)
               </p>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-2">Example:</p>
               <ul className="space-y-1 text-stone-800 ml-4 mb-4">
                 <li>• Speed: 12 km/h</li>
@@ -229,7 +229,7 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Practical Applications for Runners
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -280,7 +280,7 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Common Mistakes to Avoid
             </h2>
             
@@ -312,7 +312,7 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Quick Reference Table
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -360,7 +360,7 @@ export default function HowToCalculateRunningDistancePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Easier Way: Use Our Calculator
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

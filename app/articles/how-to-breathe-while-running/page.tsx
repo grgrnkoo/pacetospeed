@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function HowToBreatheWhileRunningPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-breathe-while-running" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="how-to-breathe-while-running" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Breathe While Running (Simple Tips That Work)
           </h1>
@@ -37,7 +37,7 @@ export default function HowToBreatheWhileRunningPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               If running feels harder than it should, breathing is often the missing piece. Simple adjustments
@@ -46,7 +46,7 @@ export default function HowToBreatheWhileRunningPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Try a Breathing Rhythm</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Try a Breathing Rhythm</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Easy pace: 3 steps inhale, 3 steps exhale</li>
               <li>Moderate pace: 2 steps inhale, 2 steps exhale</li>
@@ -55,7 +55,7 @@ export default function HowToBreatheWhileRunningPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Posture Cues</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Posture Cues</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Stand tall and relax your shoulders.</li>
               <li>Open the chest and avoid slouching.</li>
@@ -64,7 +64,7 @@ export default function HowToBreatheWhileRunningPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
             <p className="text-stone-800 leading-relaxed">
               Breathing improves with practice. Use a rhythm that matches your pace and keep your posture open
               so your lungs can work freely.

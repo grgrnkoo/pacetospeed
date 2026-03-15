@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function MarathonDistanceExplainedPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="marathon-distance-explained" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="marathon-distance-explained" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Marathon Distance Explained: Why 42.195 km?
           </h1>
@@ -39,7 +39,7 @@ export default function MarathonDistanceExplainedPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Of all running distances, the marathon holds a special place in athletic culture. The number 
@@ -58,11 +58,11 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Exact Marathon Distance
             </h2>
             
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">Official Marathon Distance</p>
               <div className="space-y-2 text-center">
                 <p className="text-2xl font-bold">42.195 kilometers</p>
@@ -71,7 +71,7 @@ export default function MarathonDistanceExplainedPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Exact Measurements:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>42,195 meters</strong> (42.195 km)</li>
@@ -85,14 +85,14 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Ancient Origin: The Legend of Pheidippides
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               The marathon's origin story dates back to 490 BCE and the Battle of Marathon in ancient Greece.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-stone-800 font-semibold mb-3">The Legend:</p>
               <p className="text-stone-800 mb-3">
                 According to historical accounts, after the Athenians defeated the Persian army at Marathon, 
@@ -105,7 +105,7 @@ export default function MarathonDistanceExplainedPage() {
               </p>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500">
               <p className="text-stone-800 font-semibold mb-2">📜 Historical Note:</p>
               <p className="text-stone-800 text-sm">
                 While this story is legendary, historians debate its accuracy. Some accounts suggest Pheidippides 
@@ -117,7 +117,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The First Modern Olympic Marathon (1896)
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -125,7 +125,7 @@ export default function MarathonDistanceExplainedPage() {
               race honoring the legendary run of Pheidippides.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">1896 Olympic Marathon:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>Distance:</strong> Approximately 40 kilometers (24.85 miles)</li>
@@ -143,7 +143,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               1908 London Olympics: The Distance That Stuck
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -151,7 +151,7 @@ export default function MarathonDistanceExplainedPage() {
               somewhat by accident.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">The 1908 London Marathon Course:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>Start:</strong> Windsor Castle (requested to start on the lawn so royal children could watch)</li>
@@ -161,7 +161,7 @@ export default function MarathonDistanceExplainedPage() {
               </ul>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500">
               <p className="text-stone-800 font-semibold mb-2">👑 The Royal Influence:</p>
               <p className="text-stone-800 text-sm">
                 The extra 385 yards weren't part of any historical significance—they were simply added so 
@@ -178,14 +178,14 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Official Standardization (1921)
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               For over a decade after 1908, marathons still varied in distance. The standardization came in 1921.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">1921 IAAF Decision:</p>
               <p className="text-stone-800 mb-3">
                 The International Amateur Athletic Federation (IAAF, now World Athletics) officially adopted 
@@ -201,7 +201,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Why Not a Round Number?
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -245,7 +245,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Marathon Pace Conversion Chart
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -323,7 +323,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Common Marathon Time Goals
             </h2>
 
@@ -403,7 +403,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Interesting Marathon Facts
             </h2>
 
@@ -462,7 +462,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Marathon vs Half Marathon
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -515,7 +515,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               The Marathon Legacy Today
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -523,7 +523,7 @@ export default function MarathonDistanceExplainedPage() {
               marathon has become more than just a race—it's a cultural icon.
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Why 42.195 km Matters:</p>
               <ul className="space-y-2 text-stone-800 text-sm">
                 <li>
@@ -550,7 +550,7 @@ export default function MarathonDistanceExplainedPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Plan Your Marathon Journey
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

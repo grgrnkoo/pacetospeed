@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function TenKToMilesConversionPage() {
   return (
-    <div className="min-h-screen">
+    <div className="w-full">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="10k-to-miles-conversion" />
-        <header className="mb-8">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="10k-to-miles-conversion" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             10K to Miles: Exact Conversion + Pace Chart
           </h1>
@@ -39,7 +39,7 @@ export default function TenKToMilesConversionPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               The 10K race sits in a sweet spot—long enough to test endurance but short enough to maintain a 
@@ -58,11 +58,11 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               10K Distance: The Exact Conversion
             </h2>
             
-            <div className="bg-stone-800 text-white rounded-lg p-6 mb-4">
+            <div className="bg-stone-800 text-white rounded-lg p-4 sm:p-6 mb-4">
               <p className="text-lg font-semibold mb-4 text-center">10K Distance Conversion</p>
               <div className="space-y-2 text-center">
                 <p className="text-2xl font-bold">10 kilometers = 6.21371 miles</p>
@@ -70,7 +70,7 @@ export default function TenKToMilesConversionPage() {
               </div>
             </div>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800">
               <p className="text-stone-800 font-semibold mb-3">Also Equals:</p>
               <ul className="space-y-2 text-stone-800">
                 <li>• <strong>10,000 meters</strong></li>
@@ -81,7 +81,7 @@ export default function TenKToMilesConversionPage() {
               </ul>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500 mt-4">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500 mt-4">
               <p className="text-stone-800 font-semibold mb-2">📊 Race Context:</p>
               <p className="text-stone-800 text-sm">
                 The 10K is the most popular road race distance worldwide. It's challenging enough to require 
@@ -91,7 +91,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               10K Pace Conversion Chart
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -169,7 +169,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               10K Finish Time Table by Pace
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -253,7 +253,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               10K Split Times by Goal Finish Time
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -341,7 +341,7 @@ export default function TenKToMilesConversionPage() {
               </table>
             </div>
 
-            <div className="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
+            <div className="bg-amber-50 rounded-lg p-3 sm:p-4 border-l-4 border-amber-500">
               <p className="text-stone-800 font-semibold mb-2">🎯 Pacing Strategy:</p>
               <p className="text-stone-800 text-sm">
                 Most runners perform best with even pacing throughout the 10K. Advanced runners may try a 
@@ -352,7 +352,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               10K Mile Split Times
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -440,7 +440,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Common 10K Time Goals Explained
             </h2>
 
@@ -520,14 +520,14 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               10K vs 5K: Pace Comparison
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
               Understanding how your paces relate across distances helps with race planning:
             </p>
 
-            <div className="bg-stone-50 rounded-lg p-6 border-l-4 border-stone-800 mb-4">
+            <div className="bg-stone-50 rounded-lg p-4 sm:p-6 border-l-4 border-stone-800 mb-4">
               <p className="text-stone-800 font-semibold mb-3">General Relationship:</p>
               <ul className="space-y-2 text-stone-800 text-sm">
                 <li>• Your 10K pace is typically <strong>10-20 seconds per km slower</strong> than your 5K pace</li>
@@ -588,7 +588,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Training Paces for 10K Success
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">
@@ -651,7 +651,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Race Day Strategy Tips
             </h2>
 
@@ -709,7 +709,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Quick Mental Math for 10K
             </h2>
 
@@ -756,7 +756,7 @@ export default function TenKToMilesConversionPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">
               Perfect Your 10K Race Planning
             </h2>
             <p className="text-stone-800 leading-relaxed mb-4">

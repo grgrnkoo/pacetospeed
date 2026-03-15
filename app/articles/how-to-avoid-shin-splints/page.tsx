@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function HowToAvoidShinSplintsPage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-avoid-shin-splints" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="how-to-avoid-shin-splints" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Avoid Shin Splints (Simple Prevention Guide)
           </h1>
@@ -37,7 +37,7 @@ export default function HowToAvoidShinSplintsPage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               Shin splints are common when training increases too fast or recovery is missing. The good news is
@@ -46,7 +46,7 @@ export default function HowToAvoidShinSplintsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Top Prevention Steps</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Top Prevention Steps</h2>
             <ul className="list-disc list-inside space-y-2 text-stone-800 ml-4">
               <li>Increase weekly mileage gradually.</li>
               <li>Alternate hard and easy days.</li>
@@ -57,7 +57,7 @@ export default function HowToAvoidShinSplintsPage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Bottom Line</h2>
             <p className="text-stone-800 leading-relaxed">
               Shin splints usually come from too much, too soon. Consistency and recovery are your best tools
               for staying pain free.

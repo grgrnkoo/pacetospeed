@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function AverageMileTimeByAgePage() {
   return (
-    <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="average-1-mile-time-by-age" />
-        <header className="mb-8">
+    <div className="w-full">
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 px-4"><ArticleStructuredData slug="average-1-mile-time-by-age" />
+        <header className="mb-6 sm:mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Average 1 Mile Run Time by Age and Gender (With Pace Breakdown)
           </h1>
@@ -37,7 +37,7 @@ export default function AverageMileTimeByAgePage() {
           </div>
         </header>
 
-        <div className="bg-white rounded-xl shadow-lg p-8 space-y-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 space-y-4 sm:space-y-8">
           <section>
             <p className="text-stone-800 leading-relaxed mb-4">
               The 1-mile run is one of the simplest benchmarks in running. It is short enough to test speed,
@@ -47,7 +47,7 @@ export default function AverageMileTimeByAgePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">Average Mile Time by Age</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">Average Mile Time by Age</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -98,7 +98,7 @@ export default function AverageMileTimeByAgePage() {
           </section>
 
           <section className="border-t border-stone-200 pt-6">
-            <h2 className="text-2xl font-semibold text-stone-800 mb-4">How to Use This</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 mb-4">How to Use This</h2>
             <p className="text-stone-800 leading-relaxed">
               Choose a goal slightly faster than your current average to drive progress. Consistency matters
               more than chasing a perfect number.
