@@ -79,7 +79,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${inter.variable} antialiased min-h-screen`}
+        className={`${inter.variable} antialiased`}
       >
         {/* Google Analytics */}
         <Script
