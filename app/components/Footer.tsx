@@ -6,7 +6,7 @@ export default function Footer() {
             <p className="lg:text-lg md:text-base text-sm text-stone-800 font-extrabold">
                 built by{' '}
                 <a
-                    href="https://x.com/grgrnko"
+                    href="https://grgrnko.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
