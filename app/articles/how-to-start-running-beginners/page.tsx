@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'How to Start Running: A Beginner-Friendly Guide',
   description: 'A simple step-by-step guide for starting running safely, including a run-walk plan and pacing tips.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['how to start running', 'running for beginners', 'beginner running plan', 'run walk method', 'start jogging'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/how-to-start-running-beginners',
+  },
   openGraph: {
     title: 'How to Start Running: A Beginner-Friendly Guide',
     description: 'A simple guide for starting running safely with a beginner plan.',
     type: 'article',
+    images: [{ url: '/api/og?slug=how-to-start-running-beginners', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-13T00:00:00.000Z',
     tags: ['beginners', 'running', 'training'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function HowToStartRunningBeginnersPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-start-running-beginners" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Start Running: A Beginner-Friendly Guide

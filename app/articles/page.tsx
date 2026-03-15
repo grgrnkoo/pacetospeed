@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Running Tips & Training Articles',
   description: 'Expert tips, guides, and insights for runners. Learn about pace, speed, training zones, treadmill workouts, and race planning strategies.',
   keywords: ['pace to speed', 'running tips', 'training articles', 'pace guide', 'running training', 'marathon training', 'treadmill workouts', 'race strategy'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles',
+  },
   openGraph: {
     title: 'Running Tips & Training Articles | Pace to Speed Converter',
     description: 'Expert tips, guides, and insights for runners. Learn about pace, speed, training zones, and race planning.',

@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Race Time Predictor: Estimate Your Finish Time (5K to Marathon)',
   description: 'Use simple pacing formulas to predict your 5K, 10K, half marathon, and marathon finish times. Includes examples and pacing tables.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['race time predictor', 'finish time calculator', 'predict race time', 'pace to time', 'running time estimate'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/race-time-predictor',
+  },
   openGraph: {
     title: 'Race Time Predictor: Estimate Your Finish Time (5K to Marathon)',
     description: 'Predict your finish time with simple pacing formulas and examples.',
     type: 'article',
+    images: [{ url: '/api/og?slug=race-time-predictor', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-06T00:00:00.000Z',
     tags: ['race', 'pace', 'prediction', 'running'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function RaceTimePredictorPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="race-time-predictor" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Race Time Predictor: Estimate Your Finish Time (5K to Marathon)

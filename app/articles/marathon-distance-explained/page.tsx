@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Marathon Distance Explained: Why 42.195 km? (History + Conversion)',
   description: 'Discover why marathons are exactly 42.195 kilometers (26.2 miles), explore the fascinating history behind this iconic distance, and get comprehensive pace charts for marathon training.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['marathon distance', '42.195 km', '26.2 miles', 'why marathon distance', 'marathon history', 'marathon origin', 'marathon pace chart', 'marathon training', 'marathon conversion', 'marathon facts'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/marathon-distance-explained',
+  },
   openGraph: {
     title: 'Marathon Distance Explained: Why 42.195 km? (History + Conversion)',
     description: 'Discover why marathons are exactly 42.195 kilometers and the fascinating history behind this iconic distance.',
     type: 'article',
+    images: [{ url: '/api/og?slug=marathon-distance-explained', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-03-08T00:00:00.000Z',
     tags: ['marathon', 'distance', 'history', 'running', '42.195km', '26.2 miles'],
   },
@@ -23,7 +29,7 @@ export default function MarathonDistanceExplainedPage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="marathon-distance-explained" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Marathon Distance Explained: Why 42.195 km?

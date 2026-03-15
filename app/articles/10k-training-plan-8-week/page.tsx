@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: '10K Training Plan: 8-Week Schedule for First-Timers',
   description: 'Beginner-friendly 8-week 10K training plan with weekly structure, key workouts, and pacing guidance.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['10k training plan', '8 week 10k plan', 'beginner 10k', '10k schedule', '10k training'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/10k-training-plan-8-week',
+  },
   openGraph: {
     title: '10K Training Plan: 8-Week Schedule for First-Timers',
     description: 'Beginner-friendly 8-week 10K plan with weekly structure and pacing guidance.',
     type: 'article',
+    images: [{ url: '/api/og?slug=10k-training-plan-8-week', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-12T00:00:00.000Z',
     tags: ['10k', 'training plan', 'running'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function TenKTrainingPlanPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="10k-training-plan-8-week" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             10K Training Plan: 8-Week Schedule for First-Timers

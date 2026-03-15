@@ -1,13 +1,16 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Run-Walk Method: A Simple Guide for New Runners',
   description: 'Learn how the run-walk method works and how to use it to build endurance safely.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['run walk method', 'run walk plan', 'beginner running', 'walk run intervals'],
   openGraph: {
     title: 'Run-Walk Method: A Simple Guide for New Runners',
     description: 'How the run-walk method works and how to use it to build endurance safely.',
     type: 'article',
+    images: [{ url: '/api/og?slug=run-walk-method-guide', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-10T00:00:00.000Z',
     tags: ['beginners', 'running', 'training'],
   },
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
 export default function RunWalkMethodGuidePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="run-walk-method-guide" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Run-Walk Method: A Simple Guide for New Runners

@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Average 5K Time by Age (Benchmarks + Pace Range)',
   description: 'See realistic 5K time ranges by age group with pace equivalents and simple goal guidance.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['average 5k time', '5k time by age', '5k pace', '5k benchmarks', '5k run time'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/average-5k-time-by-age',
+  },
   openGraph: {
     title: 'Average 5K Time by Age (Benchmarks + Pace Range)',
     description: 'Realistic 5K time ranges by age group with pace equivalents.',
     type: 'article',
+    images: [{ url: '/api/og?slug=average-5k-time-by-age', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-13T00:00:00.000Z',
     tags: ['5k', 'benchmarks', 'pace', 'running'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function Average5KTimeByAgePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="average-5k-time-by-age" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Average 5K Time by Age (Benchmarks + Pace Range)

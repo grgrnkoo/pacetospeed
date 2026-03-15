@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Heart Rate Zones for Running: How to Find Yours',
   description: 'Learn what heart rate zones mean, how to estimate your max HR, and how to use zones in training.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['heart rate zones', 'running zones', 'zone 2 running', 'heart rate training', 'max heart rate'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/heart-rate-zones-for-running',
+  },
   openGraph: {
     title: 'Heart Rate Zones for Running: How to Find Yours',
     description: 'What heart rate zones mean and how to use them in training.',
     type: 'article',
+    images: [{ url: '/api/og?slug=heart-rate-zones-for-running', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-10T00:00:00.000Z',
     tags: ['heart rate', 'training', 'running'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function HeartRateZonesForRunningPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="heart-rate-zones-for-running" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Heart Rate Zones for Running: How to Find Yours

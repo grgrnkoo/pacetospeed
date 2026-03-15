@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'How Many Calories Does Running Burn? (Simple Estimates)',
   description: 'Get simple calorie burn estimates for running based on distance, pace, and body weight.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['calories burned running', 'running calorie calculator', 'how many calories does running burn', 'running calories'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/how-many-calories-does-running-burn',
+  },
   openGraph: {
     title: 'How Many Calories Does Running Burn? (Simple Estimates)',
     description: 'Simple calorie burn estimates for running based on distance and pace.',
     type: 'article',
+    images: [{ url: '/api/og?slug=how-many-calories-does-running-burn', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-07T00:00:00.000Z',
     tags: ['calories', 'running', 'fitness'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function HowManyCaloriesDoesRunningBurnPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-many-calories-does-running-burn" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How Many Calories Does Running Burn? (Simple Estimates)

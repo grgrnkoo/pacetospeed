@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'VO2 Max for Runners: What It Is and How to Improve It',
   description: 'Learn what VO2 max means for runners and how to improve it with workouts, volume, and consistency.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['vo2 max running', 'increase vo2 max', 'running fitness metrics', 'vo2 max workouts', 'running performance'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/vo2-max-for-runners',
+  },
   openGraph: {
     title: 'VO2 Max for Runners: What It Is and How to Improve It',
     description: 'What VO2 max means and how to improve it with training.',
     type: 'article',
+    images: [{ url: '/api/og?slug=vo2-max-for-runners', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-09T00:00:00.000Z',
     tags: ['vo2 max', 'training', 'running', 'performance'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function VO2MaxForRunnersPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="vo2-max-for-runners" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             VO2 Max for Runners: What It Is and How to Improve It

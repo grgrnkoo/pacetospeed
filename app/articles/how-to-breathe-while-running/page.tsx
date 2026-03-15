@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'How to Breathe While Running (Simple Tips That Work)',
   description: 'Learn easy breathing techniques for running, including rhythm, posture, and relaxation tips.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['how to breathe while running', 'running breathing', 'breathing techniques for running', 'running tips'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/how-to-breathe-while-running',
+  },
   openGraph: {
     title: 'How to Breathe While Running (Simple Tips That Work)',
     description: 'Easy breathing techniques for running, including rhythm and posture tips.',
     type: 'article',
+    images: [{ url: '/api/og?slug=how-to-breathe-while-running', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-12T00:00:00.000Z',
     tags: ['breathing', 'running', 'tips'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function HowToBreatheWhileRunningPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-breathe-while-running" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Breathe While Running (Simple Tips That Work)

@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'How to Avoid Shin Splints (Simple Prevention Guide)',
   description: 'Practical steps to prevent shin splints, including training changes, strength work, and recovery tips.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['how to avoid shin splints', 'shin splints prevention', 'running injuries', 'shin pain running'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/how-to-avoid-shin-splints',
+  },
   openGraph: {
     title: 'How to Avoid Shin Splints (Simple Prevention Guide)',
     description: 'Practical steps to prevent shin splints with training and recovery tips.',
     type: 'article',
+    images: [{ url: '/api/og?slug=how-to-avoid-shin-splints', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-09T00:00:00.000Z',
     tags: ['injury prevention', 'running', 'shin splints'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function HowToAvoidShinSplintsPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-avoid-shin-splints" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Avoid Shin Splints (Simple Prevention Guide)

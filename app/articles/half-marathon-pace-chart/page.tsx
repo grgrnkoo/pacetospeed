@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Half Marathon Pace Chart and Distance Explained (Complete Guide)',
   description: 'Complete half marathon guide with exact distance conversion, comprehensive pace charts, finish time tables, split strategies, and training tips for 13.1 miles.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['half marathon pace', 'half marathon distance', '13.1 miles', 'half marathon pace chart', 'half marathon training', '21k pace', 'half marathon finish time', 'half marathon splits', 'half marathon calculator'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/half-marathon-pace-chart',
+  },
   openGraph: {
     title: 'Half Marathon Pace Chart and Distance Explained (Complete Guide)',
     description: 'Complete half marathon guide with exact distance, pace charts, finish time tables, and split strategies.',
     type: 'article',
+    images: [{ url: '/api/og?slug=half-marathon-pace-chart', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-04-20T00:00:00.000Z',
     tags: ['half marathon', '13.1 miles', 'pace', 'race planning', 'distance', 'running'],
   },
@@ -23,7 +29,7 @@ export default function HalfMarathonPaceChartPage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="half-marathon-pace-chart" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Half Marathon Pace Chart and Distance Explained

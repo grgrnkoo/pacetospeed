@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Convert Walking Distance to Calories: How Far Should You Walk Per Day?',
   description: 'Learn how to calculate calories burned while walking, understand how far you should walk daily for fitness and weight loss, and get practical tips for tracking your walking goals.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['walking distance calories', 'calories burned walking', 'how far to walk daily', 'walking for weight loss', 'walking distance calculator', 'steps to calories', 'walking pace calories', 'daily walking goals', 'walking fitness'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/walking-distance-calories',
+  },
   openGraph: {
     title: 'Convert Walking Distance to Calories: How Far Should You Walk Per Day?',
     description: 'Learn how to calculate calories burned while walking and understand daily walking distance goals.',
     type: 'article',
+    images: [{ url: '/api/og?slug=walking-distance-calories', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-07-18T00:00:00.000Z',
     tags: ['walking', 'calories', 'distance', 'fitness', 'health', 'weight loss'],
   },
@@ -23,7 +29,7 @@ export default function WalkingDistanceCaloriesPage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="walking-distance-calories" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Convert Walking Distance to Calories: How Far Should You Walk Per Day?

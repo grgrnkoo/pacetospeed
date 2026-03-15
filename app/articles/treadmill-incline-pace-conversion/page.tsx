@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Treadmill Incline Pace Conversion: How to Adjust for Hills',
   description: 'Use incline adjustments to match outdoor effort on a treadmill. Includes simple guidance and a quick reference table.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['treadmill incline', 'incline pace', 'treadmill pace adjustment', 'incline conversion', 'treadmill running'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/treadmill-incline-pace-conversion',
+  },
   openGraph: {
     title: 'Treadmill Incline Pace Conversion: How to Adjust for Hills',
     description: 'Use incline adjustments to match outdoor effort on a treadmill.',
     type: 'article',
+    images: [{ url: '/api/og?slug=treadmill-incline-pace-conversion', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-02T00:00:00.000Z',
     tags: ['treadmill', 'incline', 'pace', 'running'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function TreadmillInclinePaceConversionPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="treadmill-incline-pace-conversion" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Treadmill Incline Pace Conversion: How to Adjust for Hills

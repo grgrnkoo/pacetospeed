@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'How Many Miles Is a 5K / 10K / Half Marathon / Marathon? Complete Guide',
   description: 'Quick reference guide for converting common race distances from kilometers to miles. Learn the exact distances for 5K, 10K, half marathon, marathon, and ultra races with helpful pace planning tips.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['5K in miles', '10K in miles', 'half marathon distance', 'marathon distance', 'race distance conversion', 'km to miles running', '5K distance', '10K distance', 'race planning', 'running distances'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/race-distance-conversions',
+  },
   openGraph: {
     title: 'How Many Miles Is a 5K / 10K / Half Marathon / Marathon? Complete Guide',
     description: 'Quick reference guide for converting common race distances from kilometers to miles with pace planning tips.',
     type: 'article',
+    images: [{ url: '/api/og?slug=race-distance-conversions', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-09-15T00:00:00.000Z',
     tags: ['running', '5K', '10K', 'half marathon', 'marathon', 'race distances', 'conversion'],
   },
@@ -23,7 +29,7 @@ export default function RaceDistanceConversionsPage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="race-distance-conversions" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How Many Miles Is a 5K / 10K / Half Marathon / Marathon?

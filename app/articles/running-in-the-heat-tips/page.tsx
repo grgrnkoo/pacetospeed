@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Running in the Heat: Safety Tips and Pace Adjustments',
   description: 'Learn how to run safely in hot weather with hydration, pacing, and timing strategies.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['running in the heat', 'hot weather running', 'summer running tips', 'heat safety running'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/running-in-the-heat-tips',
+  },
   openGraph: {
     title: 'Running in the Heat: Safety Tips and Pace Adjustments',
     description: 'Run safely in hot weather with hydration, pacing, and timing strategies.',
     type: 'article',
+    images: [{ url: '/api/og?slug=running-in-the-heat-tips', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-06T00:00:00.000Z',
     tags: ['heat', 'running', 'safety'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function RunningInTheHeatTipsPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="running-in-the-heat-tips" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Running in the Heat: Safety Tips and Pace Adjustments

@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'How to Calculate Running Distance Based on Time and Pace (Simple Guide)',
   description: 'Learn how to calculate running distance using time and pace with simple formulas, practical examples, and tips for accurate distance estimation. Perfect for runners planning workouts and tracking training.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['running distance calculator', 'calculate running distance', 'pace and time', 'distance formula', 'running math', 'pace calculator', 'training distance', 'running metrics', 'workout planning', 'min/km to distance'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/how-to-calculate-running-distance',
+  },
   openGraph: {
     title: 'How to Calculate Running Distance Based on Time and Pace (Simple Guide)',
     description: 'Learn how to calculate running distance using time and pace with simple formulas and practical examples.',
     type: 'article',
+    images: [{ url: '/api/og?slug=how-to-calculate-running-distance', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-11-22T00:00:00.000Z',
     tags: ['running', 'distance', 'pace', 'calculation', 'training', 'workout planning'],
   },
@@ -23,7 +29,7 @@ export default function HowToCalculateRunningDistancePage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-calculate-running-distance" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Calculate Running Distance Based on Time and Pace (Simple Guide)

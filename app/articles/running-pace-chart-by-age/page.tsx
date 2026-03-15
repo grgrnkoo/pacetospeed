@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Running Pace Chart by Age and Ability (Beginner to Advanced)',
   description: 'Find realistic running pace ranges by age and ability level. Includes a simple pace chart and guidance for setting training targets.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['running pace chart', 'average running pace', 'pace by age', 'beginner running pace', 'advanced running pace', 'race pace guide'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/running-pace-chart-by-age',
+  },
   openGraph: {
     title: 'Running Pace Chart by Age and Ability (Beginner to Advanced)',
     description: 'Realistic running pace ranges by age and ability level with training guidance.',
     type: 'article',
+    images: [{ url: '/api/og?slug=running-pace-chart-by-age', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-09T00:00:00.000Z',
     tags: ['running', 'pace', 'training', 'benchmarks'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function RunningPaceChartByAgePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="running-pace-chart-by-age" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Running Pace Chart by Age and Ability (Beginner to Advanced)

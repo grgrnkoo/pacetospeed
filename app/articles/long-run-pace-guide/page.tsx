@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Long Run Pace: How Slow Is Too Slow?',
   description: 'Find the right long run pace to build endurance without overtraining. Includes practical pacing ranges and tips.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['long run pace', 'easy run pace', 'aerobic pace', 'training pace', 'long run tips'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/long-run-pace-guide',
+  },
   openGraph: {
     title: 'Long Run Pace: How Slow Is Too Slow?',
     description: 'Find the right long run pace to build endurance without overtraining.',
     type: 'article',
+    images: [{ url: '/api/og?slug=long-run-pace-guide', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-08T00:00:00.000Z',
     tags: ['long run', 'pace', 'training', 'endurance'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function LongRunPaceGuidePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="long-run-pace-guide" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Long Run Pace: How Slow Is Too Slow?

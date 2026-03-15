@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Target Pace Calculator: How Fast You Need to Run for a Goal Time',
   description: 'Calculate target pace for any goal time and distance. Includes formula, examples, and pacing tips.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['target pace', 'goal time', 'pace for finish time', 'race pace calculator', 'pace planning'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/target-pace-calculator-goal-time',
+  },
   openGraph: {
     title: 'Target Pace Calculator: How Fast You Need to Run for a Goal Time',
     description: 'Calculate target pace for any goal time and distance with examples.',
     type: 'article',
+    images: [{ url: '/api/og?slug=target-pace-calculator-goal-time', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-04T00:00:00.000Z',
     tags: ['pace', 'goal time', 'running', 'calculator'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function TargetPaceCalculatorGoalTimePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="target-pace-calculator-goal-time" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Target Pace Calculator: How Fast You Need to Run for a Goal Time

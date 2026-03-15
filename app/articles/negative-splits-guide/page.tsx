@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Negative Splits: What They Are and How to Plan Them',
   description: 'Learn what negative splits are, why they work, and how to plan your pacing for smarter races and workouts.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['negative splits', 'race pacing', 'pace strategy', 'marathon pacing', 'running strategy'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/negative-splits-guide',
+  },
   openGraph: {
     title: 'Negative Splits: What They Are and How to Plan Them',
     description: 'What negative splits are and how to plan them for smarter races.',
     type: 'article',
+    images: [{ url: '/api/og?slug=negative-splits-guide', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-05T00:00:00.000Z',
     tags: ['pacing', 'strategy', 'running'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function NegativeSplitsGuidePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="negative-splits-guide" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Negative Splits: What They Are and How to Plan Them

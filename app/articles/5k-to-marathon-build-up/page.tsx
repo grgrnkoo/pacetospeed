@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: '5K to Marathon: How to Build Up Safely (Mileage Progression Guide)',
   description: 'A practical progression guide to safely increase weekly mileage from 5K fitness to marathon readiness.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['mileage progression', 'build running base', 'increase mileage', 'marathon training base', 'running progression'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/5k-to-marathon-build-up',
+  },
   openGraph: {
     title: '5K to Marathon: How to Build Up Safely (Mileage Progression Guide)',
     description: 'A practical progression guide to safely increase weekly mileage.',
     type: 'article',
+    images: [{ url: '/api/og?slug=5k-to-marathon-build-up', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-06T00:00:00.000Z',
     tags: ['marathon', 'training', 'mileage'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function BuildUpFrom5KToMarathonPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="5k-to-marathon-build-up" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             5K to Marathon: How to Build Up Safely (Mileage Progression Guide)

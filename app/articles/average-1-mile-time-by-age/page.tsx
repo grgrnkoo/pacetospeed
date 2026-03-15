@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Average 1 Mile Run Time by Age and Gender (With Pace Breakdown)',
   description: 'See realistic average mile times by age group with pace conversions and guidance for setting a personal goal.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['average mile time', '1 mile run time', 'mile pace by age', 'running benchmarks', 'mile pace'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/average-1-mile-time-by-age',
+  },
   openGraph: {
     title: 'Average 1 Mile Run Time by Age and Gender (With Pace Breakdown)',
     description: 'Average mile times by age group with pace conversions and goal guidance.',
     type: 'article',
+    images: [{ url: '/api/og?slug=average-1-mile-time-by-age', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-13T00:00:00.000Z',
     tags: ['mile', 'pace', 'running', 'benchmarks'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function AverageMileTimeByAgePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="average-1-mile-time-by-age" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Average 1 Mile Run Time by Age and Gender (With Pace Breakdown)

@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Running Fueling 101: How to Eat and Drink for Race Day',
   description: 'A simple race-day fueling guide for runners, including carbs, hydration, and timing.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['running nutrition', 'race day fueling', 'hydration for runners', 'carb loading', 'running fuel'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/running-fueling-101',
+  },
   openGraph: {
     title: 'Running Fueling 101: How to Eat and Drink for Race Day',
     description: 'A simple race-day fueling guide for runners.',
     type: 'article',
+    images: [{ url: '/api/og?slug=running-fueling-101', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-04T00:00:00.000Z',
     tags: ['nutrition', 'race day', 'running'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function RunningFuelingPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="running-fueling-101" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Running Fueling 101: How to Eat and Drink for Race Day

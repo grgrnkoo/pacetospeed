@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Pace Calculator: Convert Minutes per Mile to Minutes per Kilometer',
   description: 'Learn how to convert min/mile to min/km with simple formulas, a quick reference table, and practical examples. Perfect for runners switching between units.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['min/mile to min/km', 'pace calculator', 'pace conversion', 'minutes per mile to minutes per kilometer', 'running pace converter', 'min/km pace'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/pace-calculator-min-mile-to-min-km',
+  },
   openGraph: {
     title: 'Pace Calculator: Convert Minutes per Mile to Minutes per Kilometer',
     description: 'Convert min/mile to min/km with formulas, examples, and a quick reference table.',
     type: 'article',
+    images: [{ url: '/api/og?slug=pace-calculator-min-mile-to-min-km', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-10T00:00:00.000Z',
     tags: ['pace', 'conversion', 'running', 'training'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function PaceCalculatorMinMileToMinKmPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="pace-calculator-min-mile-to-min-km" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Pace Calculator: Convert Minutes per Mile to Minutes per Kilometer

@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Why Most Running Apps Don\'t Let You Convert Pace to Speed',
   description: 'Discover why popular running apps like Strava, Nike Run Club, Adidas Running, and Runna don\'t include pace-to-speed conversion tools, and why you need a dedicated converter for training.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['pace to speed', 'running apps', 'Strava pace', 'Nike Run Club', 'Adidas Running', 'Runna app', 'pace converter', 'speed converter', 'running app limitations', 'treadmill pace'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/why-running-apps-dont-convert-pace',
+  },
   openGraph: {
     title: 'Why Most Running Apps Don\'t Let You Convert Pace to Speed',
     description: 'Explore why popular running apps don\'t include pace-to-speed conversion and why you need a dedicated tool.',
     type: 'article',
+    images: [{ url: '/api/og?slug=why-running-apps-dont-convert-pace', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-02-14T00:00:00.000Z',
     tags: ['running apps', 'pace', 'speed', 'conversion', 'Strava', 'training tools'],
   },
@@ -23,7 +29,7 @@ export default function WhyRunningAppsDontConvertPacePage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="why-running-apps-dont-convert-pace" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Why Most Running Apps Don't Let You Convert Pace to Speed

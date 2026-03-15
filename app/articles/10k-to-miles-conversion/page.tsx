@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '10K to Miles: Exact Conversion + Pace Chart (Complete Guide)',
   description: 'Complete 10K conversion guide with exact distance, pace charts, finish time tables, and split strategies. Convert 10K to miles and plan your race with accurate pace calculations.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['10K to miles', '10K conversion', '10K pace chart', '10K finish time', '10K race pace', 'kilometers to miles', '10K training', '10K time goals', '10K calculator', 'running pace 10K'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/10k-to-miles-conversion',
+  },
   openGraph: {
     title: '10K to Miles: Exact Conversion + Pace Chart (Complete Guide)',
     description: 'Complete 10K conversion guide with exact distance, pace charts, finish time tables, and split strategies.',
     type: 'article',
+    images: [{ url: '/api/og?slug=10k-to-miles-conversion', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-05-12T00:00:00.000Z',
     tags: ['10K', 'conversion', 'pace', 'race planning', 'distance', 'running'],
   },
@@ -23,7 +29,7 @@ export default function TenKToMilesConversionPage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="10k-to-miles-conversion" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             10K to Miles: Exact Conversion + Pace Chart

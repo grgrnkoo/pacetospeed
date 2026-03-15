@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'How to Calculate Pace from Time and Distance (Step-by-Step)',
   description: 'Learn the exact pace formula, see worked examples, and avoid common mistakes when calculating pace from time and distance.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['calculate pace', 'pace formula', 'pace from time and distance', 'running pace calculator', 'pace math'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/calculate-pace-from-time-distance',
+  },
   openGraph: {
     title: 'How to Calculate Pace from Time and Distance (Step-by-Step)',
     description: 'Exact pace formula with examples and common pitfalls.',
     type: 'article',
+    images: [{ url: '/api/og?slug=calculate-pace-from-time-distance', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-07T00:00:00.000Z',
     tags: ['pace', 'training', 'running', 'calculator'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function CalculatePaceFromTimeDistancePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="calculate-pace-from-time-distance" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Calculate Pace from Time and Distance (Step-by-Step)

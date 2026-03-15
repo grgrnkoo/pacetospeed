@@ -1,14 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '5K to Miles Conversion Table (Pace, Time, Distance) - Complete Guide',
   description: 'Complete 5K conversion reference with pace charts, finish time tables, and distance conversions. Plan your 5K race strategy with accurate km to mile calculations and pace targets.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['5K to miles', '5K conversion', '5K pace chart', '5K finish time', '5K race pace', 'kilometers to miles', '5K training', '5K time goals', 'running pace table', '5K calculator'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/5k-to-miles-conversion-table',
+  },
   openGraph: {
     title: '5K to Miles Conversion Table (Pace, Time, Distance) - Complete Guide',
     description: 'Complete 5K conversion reference with pace charts, finish time tables, and distance conversions.',
     type: 'article',
+    images: [{ url: '/api/og?slug=5k-to-miles-conversion-table', width: 1200, height: 630, alt: '' }],
     publishedTime: '2025-06-05T00:00:00.000Z',
     tags: ['5K', 'conversion', 'pace', 'race planning', 'distance', 'running'],
   },
@@ -23,7 +29,7 @@ export default function FiveKToMilesConversionPage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="5k-to-miles-conversion-table" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             5K to Miles Conversion Table (Pace, Time, Distance)

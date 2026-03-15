@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Treadmill Pace vs Outdoor Pace: Why They Feel Different',
   description: 'Understand why treadmill pace feels easier or harder than outdoor running and how to adjust your training for accurate effort.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['treadmill pace vs outdoor', 'treadmill pace conversion', 'indoor running pace', 'treadmill running tips', 'outdoor vs treadmill'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/treadmill-pace-vs-outdoor',
+  },
   openGraph: {
     title: 'Treadmill Pace vs Outdoor Pace: Why They Feel Different',
     description: 'Why treadmill pace feels different and how to adjust for accurate effort.',
     type: 'article',
+    images: [{ url: '/api/og?slug=treadmill-pace-vs-outdoor', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-03T00:00:00.000Z',
     tags: ['treadmill', 'running', 'pace', 'training'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function TreadmillPaceVsOutdoorPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="treadmill-pace-vs-outdoor" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Treadmill Pace vs Outdoor Pace: Why They Feel Different

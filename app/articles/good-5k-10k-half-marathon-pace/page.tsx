@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'What Is a Good 5K, 10K, or Half Marathon Pace? (Benchmarks + Tips)',
   description: 'Benchmarks for good 5K, 10K, and half marathon paces with realistic ranges, examples, and how to pick your target pace.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['good 5k pace', 'good 10k pace', 'good half marathon pace', 'race pace benchmarks', 'running pace guide'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/good-5k-10k-half-marathon-pace',
+  },
   openGraph: {
     title: 'What Is a Good 5K, 10K, or Half Marathon Pace? (Benchmarks + Tips)',
     description: 'Benchmarks for good 5K, 10K, and half marathon paces with realistic ranges.',
     type: 'article',
+    images: [{ url: '/api/og?slug=good-5k-10k-half-marathon-pace', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-08T00:00:00.000Z',
     tags: ['running', 'pace', '5k', '10k', 'half marathon'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function GoodRacePacePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="good-5k-10k-half-marathon-pace" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             What Is a Good 5K, 10K, or Half Marathon Pace?

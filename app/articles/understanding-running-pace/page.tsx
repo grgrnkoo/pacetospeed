@@ -1,15 +1,20 @@
 import Link from 'next/link';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Understanding Running Pace: A Complete Guide for Runners',
   description: 'Learn everything about running pace - what it is, how it differs from speed, why it matters for training, and common training paces including easy, tempo, and race pace.',
   keywords: ['pace to speed', 'running pace', 'pace vs speed', 'training pace', 'easy pace', 'tempo pace', 'race pace', 'running training zones', 'pace calculation', 'marathon pace'],
-  authors: [{ name: 'Oleg', url: 'https://x.com/grgrnko' }],
+  authors: [{ name: 'Pace to Speed' }],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/understanding-running-pace',
+  },
   openGraph: {
     title: 'Understanding Running Pace: A Complete Guide for Runners',
     description: 'Learn everything about running pace - what it is, how it differs from speed, and why it matters for your training.',
     type: 'article',
+    images: [{ url: '/api/og?slug=understanding-running-pace', width: 1200, height: 630, alt: '' }],
     publishedTime: '2024-01-15T00:00:00.000Z',
     authors: ['Oleg'],
     tags: ['running', 'pace', 'training', 'tempo', 'easy pace', 'race pace'],
@@ -26,7 +31,7 @@ export default function UnderstandingRunningPacePage() {
   return (
     <div className="min-h-screen">
       {/* Article Content */}
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="understanding-running-pace" />
         <header className="mb-8">
           <h1 className="text-4xl font-bold text-stone-800 mb-4">
             Understanding Running Pace

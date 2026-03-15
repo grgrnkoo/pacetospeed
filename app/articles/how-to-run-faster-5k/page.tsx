@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'How to Run a Faster 5K: 7 Practical Changes That Work',
   description: 'Seven proven ways to improve your 5K time, from pacing to workouts and recovery.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['faster 5k', 'improve 5k time', '5k training tips', '5k pacing', '5k workouts'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/how-to-run-faster-5k',
+  },
   openGraph: {
     title: 'How to Run a Faster 5K: 7 Practical Changes That Work',
     description: 'Seven proven ways to improve your 5K time, from pacing to workouts and recovery.',
     type: 'article',
+    images: [{ url: '/api/og?slug=how-to-run-faster-5k', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-11T00:00:00.000Z',
     tags: ['5k', 'training', 'running', 'performance'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function HowToRunFaster5KPage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="how-to-run-faster-5k" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             How to Run a Faster 5K: 7 Practical Changes That Work

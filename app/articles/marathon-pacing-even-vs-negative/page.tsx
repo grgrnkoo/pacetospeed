@@ -1,13 +1,19 @@
 import { Metadata } from 'next';
+import ArticleStructuredData from '@/app/components/ArticleStructuredData';
 
 export const metadata: Metadata = {
   title: 'Marathon Pacing Strategy: Even Splits vs Negative Splits',
   description: 'Compare even splits and negative splits for marathon pacing, with pros, cons, and practical guidance.',
+  authors: [{ name: 'Pace to Speed' }],
   keywords: ['marathon pacing', 'even splits', 'negative splits marathon', 'race strategy', 'marathon pace'],
+  alternates: {
+    canonical: 'https://pacetospeed.xyz/articles/marathon-pacing-even-vs-negative',
+  },
   openGraph: {
     title: 'Marathon Pacing Strategy: Even Splits vs Negative Splits',
     description: 'Compare even splits and negative splits with pros, cons, and guidance.',
     type: 'article',
+    images: [{ url: '/api/og?slug=marathon-pacing-even-vs-negative', width: 1200, height: 630, alt: '' }],
     publishedTime: '2026-03-07T00:00:00.000Z',
     tags: ['marathon', 'pacing', 'strategy'],
   },
@@ -21,7 +27,7 @@ export const metadata: Metadata = {
 export default function MarathonPacingEvenVsNegativePage() {
   return (
     <div className="min-h-screen">
-      <article className="max-w-3xl mx-auto py-12 px-4">
+      <article className="max-w-3xl mx-auto py-12 px-4"><ArticleStructuredData slug="marathon-pacing-even-vs-negative" />
         <header className="mb-8">
           <h1 className="text-2xl lg:text-4xl font-bold text-stone-800 mb-1 lg:mb-2">
             Marathon Pacing Strategy: Even Splits vs Negative Splits
