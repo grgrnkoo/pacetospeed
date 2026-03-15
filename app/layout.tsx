@@ -94,7 +94,7 @@ export default function RootLayout({
             gtag('config', 'G-F4M6TDBQQH');
           `}
         </Script>
-        <div className="flex-1 w-full min-h-screen bg-linear-to-br from-slate-150 to-stone-100 flex flex-col items-center justify-center p-3 md:pt-20 pt-16">
+        <div className="flex-1 w-full min-h-dvh bg-linear-to-br from-slate-150 to-stone-100 flex flex-col items-center justify-center p-3 md:pt-20 pt-16">
           <Header />
           {children}
           <Footer />
