@@ -103,7 +103,7 @@ export default function AddToHomeScreen() {
 
                         <div className="bg-stone-200/40 rounded-xl p-4 mb-2 text-left">
                             <p className="font-extrabold text-stone-800 text-sm sm:text-base mb-2">
-                                {isIOS ? 'quick steps for iOS (use Safari)' : 'quick steps for Android (use Chrome)'}
+                                {isIOS ? 'quick steps for iOS (use Safari Or Chrome)' : 'quick steps for Android (use Chrome)'}
                             </p>
                             <div className="space-y-1 text-stone-700 text-sm sm:text-base font-bold leading-relaxed">
                                 {isIOS ? (
