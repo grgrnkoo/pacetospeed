@@ -21,7 +21,6 @@ export default function Footer() {
                 <a href='/articles'>
                     articles
                 </a>
-                <span className="text-stone-300">|</span>
                 <AddToHomeScreen />
             </div>
         </footer>
