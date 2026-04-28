@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 import ConverterClient from '@/app/components/ConverterClient';
-import LoadingFallback from '@/app/components/LoadingFallback';
 import HintOverlay from '@/app/components/HintOverlay';
 
 export const metadata: Metadata = {
@@ -28,7 +27,7 @@ export default function Home() {
               <li>the other value updates automatically</li>
           </HintOverlay>
         </div>
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={null}>
           <ConverterClient />
         </Suspense>
       </div>
