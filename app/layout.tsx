@@ -94,7 +94,13 @@ export default function RootLayout({
             gtag('config', 'G-F4M6TDBQQH');
           `}
         </Script>
-        <div className="flex-1 w-full min-h-dvh bg-linear-to-br from-slate-150 to-stone-100 flex flex-col items-center justify-center p-3 md:pt-20 pt-16">
+        <iframe
+          src="https://sendastep.com/banner.html"
+          title="Senda — Join the waitlist"
+          loading="lazy"
+          className="fixed top-0 left-0 right-0 w-full h-12 border-0 z-[60] block"
+        />
+        <div className="flex-1 w-full min-h-dvh bg-linear-to-br from-slate-150 to-stone-100 flex flex-col items-center justify-center p-3 md:pt-32 pt-28">
           <Header />
           {children}
           <Footer />

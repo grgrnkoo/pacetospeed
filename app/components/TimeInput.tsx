@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function TimeInput({
     time,
@@ -8,8 +8,7 @@ export default function TimeInput({
     setTime: (time: string) => void;
 }) {
     const [localTime, setLocalTime] = useState(time);
-    const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
-    
+
     // Sync local state when prop changes from parent
     useEffect(() => {
         setLocalTime(time);
@@ -71,19 +70,7 @@ export default function TimeInput({
 
         const newTime = `${hours}:${minutes}:${seconds}`;
         setLocalTime(newTime);
-
-        // Clear existing timer
-        if (validationTimerRef.current) {
-            clearTimeout(validationTimerRef.current);
-        }
-
-        // Update parent immediately so users can zero out quickly
         setTime(newTime);
-
-        // Delay validation to avoid fighting input while typing
-        validationTimerRef.current = setTimeout(() => {
-            validateAndCorrectTime(newTime);
-        }, 300);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -110,21 +97,8 @@ export default function TimeInput({
             return;
         }
 
-        if (validationTimerRef.current) {
-            clearTimeout(validationTimerRef.current);
-        }
-
         validateAndCorrectTime(localTime);
     };
-
-    // Cleanup timers on unmount
-    useEffect(() => {
-        return () => {
-            if (validationTimerRef.current) {
-                clearTimeout(validationTimerRef.current);
-            }
-        };
-    }, []);
 
     return (
         <input

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function PaceInput({
     pace,
@@ -8,8 +8,7 @@ export default function PaceInput({
     setPace: (pace: string) => void;
 }) {
     const [localPace, setLocalPace] = useState(pace);
-    const validationTimerRef = useRef<NodeJS.Timeout | null>(null);
-    
+
     // Sync local state when prop changes from parent
     useEffect(() => {
         setLocalPace(pace);
@@ -58,19 +57,7 @@ export default function PaceInput({
 
         const newPace = `${minutes}:${seconds}`;
         setLocalPace(newPace);
-
-        // Clear existing timer
-        if (validationTimerRef.current) {
-            clearTimeout(validationTimerRef.current);
-        }
-
-        // Update parent immediately so users can zero out quickly
         setPace(newPace);
-
-        // Delay validation to avoid fighting input while typing
-        validationTimerRef.current = setTimeout(() => {
-            validateAndCorrectPace(newPace);
-        }, 300);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -96,21 +83,8 @@ export default function PaceInput({
             return;
         }
 
-        if (validationTimerRef.current) {
-            clearTimeout(validationTimerRef.current);
-        }
-
         validateAndCorrectPace(localPace);
     };
-
-    // Cleanup timers on unmount
-    useEffect(() => {
-        return () => {
-            if (validationTimerRef.current) {
-                clearTimeout(validationTimerRef.current);
-            }
-        };
-    }, []);
 
     return (
         <input

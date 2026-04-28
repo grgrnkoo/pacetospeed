@@ -47,7 +47,7 @@ export default function HintOverlay({ children }: { children: React.ReactNode })
                                 </div>
                             </li>
                             <li>distance and speed fields work like regular inputs</li>
-                            <li>overflow carries over automatically - type 75 seconds and it becomes 1 min 15 sec
+                            <li>once you click outside the field, your input is tidied up into the standard MM:SS or HH:MM:SS format - so 75 seconds becomes 1 min 15 sec
                                 <div className="mt-1 flex items-center gap-1.5 text-xs sm:text-sm text-stone-400 font-mono">
                                     <span className="bg-stone-200/60 rounded px-1.5 py-0.5 font-extrabold">00:75</span>
                                     <span>&#8594;</span>

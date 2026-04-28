@@ -5,10 +5,9 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className="fixed top-12 left-0 right-0 z-50 bg-transparent">
       <div className="w-full max-w-4xl mx-auto py-4 px-4 flex justify-between items-center">
         <Link
           href="/"
