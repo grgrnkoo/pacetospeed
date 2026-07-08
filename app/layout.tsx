@@ -96,7 +96,7 @@ export default function RootLayout({
         </Script>
         <iframe
           src="https://sendastep.com/banner.html"
-          title="Senda — Join the waitlist"
+          title="Senda: Track & Share Steps"
           loading="lazy"
           className="fixed top-0 left-0 right-0 w-full h-12 border-0 z-[60] block"
         />
