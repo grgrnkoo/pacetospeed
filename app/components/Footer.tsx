@@ -21,6 +21,9 @@ export default function Footer() {
                 <a href='/articles'>
                     articles
                 </a>
+                <a href='/guides'>
+                    guides
+                </a>
                 <AddToHomeScreen />
             </div>
         </footer>

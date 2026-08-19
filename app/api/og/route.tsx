@@ -1,15 +1,17 @@
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
 import { articles } from '@/app/articles/data';
+import { guides } from '@/app/guides/data';
 
 export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
     const slug = request.nextUrl.searchParams.get('slug');
-    const article = articles.find((a) => a.slug === slug);
+    const entry =
+        articles.find((a) => a.slug === slug) ?? guides.find((g) => g.slug === slug);
 
-    const title = article?.title ?? 'Pace to Speed Converter';
-    const description = article?.description ?? '';
+    const title = entry?.title ?? 'Pace to Speed Converter';
+    const description = entry?.description ?? '';
 
     return new ImageResponse(
         (

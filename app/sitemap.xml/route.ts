@@ -1,4 +1,5 @@
 import { articles } from "../articles/data";
+import { guides } from "../guides/data";
 
 export async function GET() {
   const baseUrl = "https://pacetospeed.xyz";
@@ -32,6 +33,12 @@ export async function GET() {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/guides`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 
   const distancePages = distances.map((distance) => ({
@@ -48,7 +55,14 @@ export async function GET() {
     priority: 0.7,
   }));
 
-  const pages = [...staticPages, ...distancePages, ...articlePages];
+  const guidePages = guides.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}`,
+    lastModified: new Date(guide.date),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const pages = [...staticPages, ...distancePages, ...articlePages, ...guidePages];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
